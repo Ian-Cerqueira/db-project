@@ -1,3 +1,5 @@
+/* Talvez adicionar mais checks e definir a situação do assistiu/log-compartilhado */
+
 CREATE TABLE Obra (
     id NUMBER,
     nome VARCHAR2(200) NOT NULL,
