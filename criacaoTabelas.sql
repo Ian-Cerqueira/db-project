@@ -118,7 +118,9 @@ CREATE TABLE Lista_Personalizada (
 
     CONSTRAINT Lista_Personalizada_pkey PRIMARY KEY(id_lista),
     CONSTRAINT Lista_Personalizada_fkey FOREIGN KEY(id_lista)
-        REFERENCES Lista(id)
+        REFERENCES Lista(id),
+    CONSTRAINT Lista_Personalizada_ck_visibilidade CHECK(visibilidade IN ('1', '0'))
+
 );
 
 CREATE TABLE Review (
@@ -161,5 +163,121 @@ CREATE TABLE Participou (
         REFERENCES Obra(id),
     CONSTRAINT Participou_fkey_Artista FOREIGN KEY(id_artista)
         REFERENCES Artistas(id)
+
+);
+
+CREATE TABLE Funcoes (
+    id_obra NUMBER,
+    id_artista NUMBER,
+    funcao VARCHAR2(80),
+
+    CONSTRAINT Funcoes_pkey PRIMARY KEY(id_obra, id_artista, funcao),
+    CONSTRAINT Funcoes_fkey_Obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id),
+    CONSTRAINT Funcoes_fkey_Artista FOREIGN KEY(id_artista)
+        REFERENCES Artistas(id)
+
+);
+
+CREATE TABLE Segue (
+    id_seguidor NUMBER,
+    id_seguido NUMBER, 
+
+    CONSTRAINT Segue_ck_NoSelfFollow CHECK(id_seguidor <> id_seguido),
+    CONSTRAINT Segue_pkey PRIMARY KEY(id_seguidor, id_seguido),
+    CONSTRAINT Segue_fkey FOREIGN KEY(id_seguidor)
+        REFERENCES Usuario(id),
+    CONSTRAINT Segue_fkey FOREIGN KEY(id_seguido)
+        REFERENCES Usuario(id),
+
+);
+
+-- CREATE TABLE Assistiu (
+--     id_obra NUMBER,
+--     id_usuario NUMBER,
+--     data_assistida DATE NOT NULL,
+--     reassistindo CHAR(1) DEFAULT '0', /* 1 -> reassistindo, 0 -> não reassistindo */
+
+--     CONSTRAINT Assistiu_pkey PRIMARY KEY(id_obra, id_usuario),
+--     CONSTRAINT Assistiu_fkey_Obra FOREIGN KEY(id_obra)
+--         REFERENCES Obra(id),
+--     CONSTRAINT Assistiu_fkey_Usuario FOREIGN KEY(id_usuario)
+--         REFERENCES Usuario(id),
+--     CONSTRAINT Assistiu_ck_reassistindo CHECK(reassistindo IN ('1', '0'))
+
+-- ); 
+
+CREATE TABLE Adicionou (
+    id_lista NUMBER,
+    id_obra NUMBER,
+    id_usuario NUMBER,
+    data_adicao TIMESTAMP NOT NULL,
+
+    CONSTRAINT Adicionou_pkey PRIMARY KEY(id_lista, id_obra, id_usuario),
+    CONSTRAINT Adicionou_fkey_Lista FOREIGN KEY(id_lista)
+        REFERENCES Lista(id),
+    CONSTRAINT Adicionou_fkey_Obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id),
+    CONSTRAINT Adicionou_fkey_Usuario FOREIGN KEY(id_usuario)
+        REFERENCES Usuario(id)
+    
+);
+
+CREATE TABLE Curtiu_Obra (
+    id_usuario NUMBER,
+    id_obra NUMBER,
+
+    CONSTRAINT Curtiu_Obra_pkey PRIMARY KEY(id_usuario, id_obra),
+    CONSTRAINT Curtiu_Obra_fkey_Usuario FOREIGN KEY(id_usuario)
+        REFERENCES Usuario(id),
+    CONSTRAINT Curtiu_Obra_fkey_Obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id)
+
+);
+
+CREATE TABLE Curtiu_Lista (
+    id_usuario NUMBER,
+    id_lista NUMBER,
+
+    CONSTRAINT Curtiu_Lista_pkey PRIMARY KEY(id_usuario, id_lista),
+    CONSTRAINT Curtiu_Lista_fkey_Usuario FOREIGN KEY(id_usuario)
+        REFERENCES Usuario(id),
+    CONSTRAINT Curtiu_Lista_fkey_Lista FOREIGN KEY(id_lista)
+        REFERENCES Lista(id)
+);
+
+CREATE TABLE Curtiu_Review (
+    id_usuario_curtidor NUMBER,
+    id_usuario_autor NUMBER,
+    id_obra NUMBER,
+    instante_review NUMBER,
+
+    CONSTRAINT Curtiu_Review_pkey PRIMARY KEY(id_usuario_curtidor, id_usuario_autor, id_obra, instante_review),
+    CONSTRAINT Curtiu_Review_fkey_curtidor FOREIGN KEY(id_usuario_curtidor)
+        REFERENCES Usuario(id),
+    CONSTRAINT Curtiu_Review_fkey_autor FOREIGN KEY(id_usuario_autor)
+        REFERENCES Usuario(id),
+    CONSTRAINT Curtiu_Review_fkey_Obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id),
+    CONSTRAINT Curtiu_Review_fkey_instantereview FOREIGN KEY(instante_review)
+        REFERENCES Review(instante_avalicao)
+
+);
+
+CREATE TABLE Log_compartilhado (
+    id_obra NUMBER,
+    id_usuario_log NUMBER,
+    id_usuario_compartilhador NUMBER,
+    instante_log TIMESTAMP,
+    
+    CONSTRAINT Log_compartilhado_pkey PRIMARY KEY(id_obra, id_usuario_log, id_usuario_compartilhador, instante_log),
+    CONSTRAINT Log_compartilhado_fkey_Obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id),
+    CONSTRAINT Log_compartilhado_fkey_Usuariolog FOREIGN KEY(id_usuario_log)
+        REFERENCES Usuario(id),
+    CONSTRAINT Log_compartilhado_fkey_compartilhador FOREIGN KEY(id_usuario_compartilhador)
+        REFERENCES Usuario(id),
+    CONSTRAINT Log_compartilhado_fkey_instantelog FOREIGN KEY(instante_log)
+        REFERENCES Entrada_do_log(instante_log)
 
 );
