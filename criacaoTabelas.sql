@@ -3,7 +3,7 @@ CREATE TABLE Obra (
     nome VARCHAR2(200) NOT NULL,
     tipo VARCHAR2(100) NOT NULL, /* CHECK 'longa' or 'curta' */
     dataLancamento DATE, /* data válida -> 1300 -> NAO */
-    sinopse VARCHAR2(1500) DEFAULT 'No synopsis.',
+    sinopse VARCHAR2(1500) DEFAULT 'Sem sinopse.',
     paisDeOrigem VARCHAR2(100) NOT NULL,
     duracao NUMBER NOT NULL,
 
@@ -96,3 +96,29 @@ CREATE TABLE Artistas (
 
 
 );
+
+CREATE TABLE Lista (
+    id NUMBER,
+
+    CONSTRAINT Lista_pkey PRIMARY KEY(id)
+);
+
+CREATE TABLE Watchlist (
+    id_lista NUMBER,
+
+    CONSTRAINT Watchlist_pkey PRIMARY KEY(id_lista),
+    CONSTRAINT Watchlist_fkey FOREIGN KEY(id_lista)
+        REFERENCES Lista(id)
+);
+
+CREATE TABLE Lista_Personalizada (
+    id_lista NUMBER, 
+    descricao VARCHAR2(500) DEFAULT 'Sem descrição.',
+    visibilidade CHAR(1) DEFAULT '1', /* 1 -> público, 0 -> não público */
+    titulo VARCHAR2(200) NOT NULL,
+
+    CONSTRAINT Lista_Personalizada_pkey PRIMARY KEY(id_lista),
+    CONSTRAINT Lista_Personalizada_fkey FOREIGN KEY(id_lista),
+        REFERENCES Lista(id)
+);
+
