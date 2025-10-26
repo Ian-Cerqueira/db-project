@@ -94,7 +94,6 @@ CREATE TABLE Artistas (
 
     CONSTRAINT Artista_pkey PRIMARY KEY(id)
 
-
 );
 
 CREATE TABLE Lista (
@@ -118,7 +117,49 @@ CREATE TABLE Lista_Personalizada (
     titulo VARCHAR2(200) NOT NULL,
 
     CONSTRAINT Lista_Personalizada_pkey PRIMARY KEY(id_lista),
-    CONSTRAINT Lista_Personalizada_fkey FOREIGN KEY(id_lista),
+    CONSTRAINT Lista_Personalizada_fkey FOREIGN KEY(id_lista)
         REFERENCES Lista(id)
 );
 
+CREATE TABLE Review (
+    id_obra NUMBER,
+    id_usuario NUMBER,
+    instante_avalicao TIMESTAMP,
+    conteudo VARCHAR2(1000) NOT NULL,
+    nota NUMBER NOT NULL,
+    possui_spoiler CHAR(1) DEFAULT '0' /* 1 -> possui spoiler, 0 -> não possui spoiler */
+
+    CONSTRAINT Review_ck_nota CHECK(nota BETWEEN 0 AND 5),
+    CONSTRAINT Review_ck_spoiler CHECK(possui_spoiler in ('1', '0')),
+    CONSTRAINT Review_pkey PRIMARY KEY(id_obra, id_usuario, instante_avalicao),
+    CONSTRAINT Review_fkey_obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id),
+    CONSTRAINT Review_fkey_usuario FOREIGN KEY(id_usuario)
+        REFERENCES Usuario(id)
+
+);
+
+CREATE TABLE Entrada_do_log (
+    id_obra NUMBER,
+    id_usuario NUMBER,
+    instante_log TIMESTAMP,
+
+    CONSTRAINT Entrada_do_log_pkey PRIMARY KEY(id_obra, id_usuario, instante_log),
+    CONSTRAINT Entrada_do_log_fkey_Obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id),
+    CONSTRAINT Entrada_do_log_fkey_Usuario FOREIGN KEY(id_usuario)
+        REFERENCES Usuario(id)
+
+);
+
+CREATE TABLE Participou (
+    id_obra NUMBER,
+    id_artista NUMBER,
+
+    CONSTRAINT Participou_pkey PRIMARY KEY(id_obra, id_artista),
+    CONSTRAINT Participou_fkey_Obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id),
+    CONSTRAINT Participou_fkey_Artista FOREIGN KEY(id_artista)
+        REFERENCES Artistas(id)
+
+);
