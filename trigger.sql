@@ -6,6 +6,7 @@ BEGIN
     INTO :NEW.id 
     FROM DUAL;
 END;
+/
 
 CREATE OR REPLACE TRIGGER trg_artista_id
 BEFORE INSERT ON Artistas
@@ -15,6 +16,7 @@ BEGIN
     INTO :NEW.id 
     FROM DUAL;
 END;
+/
 
 CREATE OR REPLACE TRIGGER trg_lista_id
 BEFORE INSERT ON Lista
@@ -24,6 +26,7 @@ BEGIN
     INTO :NEW.id 
     FROM DUAL;
 END;
+/
 
 CREATE OR REPLACE TRIGGER trg_usuario_id
 BEFORE INSERT ON Usuario
@@ -33,3 +36,4 @@ BEGIN
     INTO :NEW.id 
     FROM DUAL;
 END;
+/
