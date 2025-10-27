@@ -77,15 +77,15 @@ CREATE TABLE Posters (
 
 );
 
-CREATE TABLE Tags (
-    id_obra NUMBER,
-    tag VARCHAR2(50),
+-- CREATE TABLE Tags (
+--     id_obra NUMBER,
+--     tag VARCHAR2(50),
 
-    CONSTRAINT Tags_pkey PRIMARY KEY(id_obra, tag),
-    CONSTRAINT Tags_fkey FOREIGN KEY(id_obra)
-        REFERENCES Obra(id)
+--     CONSTRAINT Tags_pkey PRIMARY KEY(id_obra, tag),
+--     CONSTRAINT Tags_fkey FOREIGN KEY(id_obra)
+--         REFERENCES Obra(id)
 
-);
+-- );
 
 CREATE TABLE Usuario (
     id NUMBER,
@@ -122,11 +122,11 @@ CREATE TABLE Nacionalidades (
 
 );
 
-CREATE TABLE Lista (
-    id NUMBER,
+-- CREATE TABLE Lista (
+--     id NUMBER,
 
-    CONSTRAINT Lista_pkey PRIMARY KEY(id)
-);
+--     CONSTRAINT Lista_pkey PRIMARY KEY(id)
+-- );
 
 CREATE TABLE Watchlist (
     id_lista NUMBER,
@@ -218,20 +218,20 @@ CREATE TABLE Segue (
 
 );
 
-CREATE TABLE Assistiu (
-    id_obra NUMBER,
-    id_usuario NUMBER,
-    data_assistida DATE NOT NULL,
-    reassistindo CHAR(1) DEFAULT '0', /* 1 -> reassistindo, 0 -> não reassistindo */
+-- CREATE TABLE Assistiu (
+--     id_obra NUMBER,
+--     id_usuario NUMBER,
+--     data_assistida DATE NOT NULL,
+--     reassistindo CHAR(1) DEFAULT '0', /* 1 -> reassistindo, 0 -> não reassistindo */
 
-    CONSTRAINT Assistiu_pkey PRIMARY KEY(id_obra, id_usuario),
-    CONSTRAINT Assistiu_fkey_Obra FOREIGN KEY(id_obra)
-        REFERENCES Obra(id),
-    CONSTRAINT Assistiu_fkey_Usuario FOREIGN KEY(id_usuario)
-        REFERENCES Usuario(id),
-    CONSTRAINT Assistiu_ck_reassistindo CHECK(reassistindo IN ('1', '0'))
+--     CONSTRAINT Assistiu_pkey PRIMARY KEY(id_obra, id_usuario),
+--     CONSTRAINT Assistiu_fkey_Obra FOREIGN KEY(id_obra)
+--         REFERENCES Obra(id),
+--     CONSTRAINT Assistiu_fkey_Usuario FOREIGN KEY(id_usuario)
+--         REFERENCES Usuario(id),
+--     CONSTRAINT Assistiu_ck_reassistindo CHECK(reassistindo IN ('1', '0'))
 
-); 
+-- ); 
 
 CREATE TABLE Adicionou (
     id_lista NUMBER,

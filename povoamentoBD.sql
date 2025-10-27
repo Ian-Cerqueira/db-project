@@ -202,115 +202,56 @@ INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES
 (3, 15, 'Ator'),
 (7, 18, 'Ator');
 
--- Inserindo Listas
+-- Listas Personalizadas
+INSERT INTO Lista_Personalizada (id_lista,descricao, visibilidade ,titulo) VALUES
+(lista_seq.CURRVAL, 'Minhas obras japonesas favoritas' , 0, 'Obras Japonesas'),
+(lista_seq.CURRVAL, 'Absolut Cinema' , 1, 'CINEMA'),
+(lista_seq.CURRVAL, 0, 'Animacao'),
+(lista_seq.CURRVAL, 'Quem nao viu veja!' , 1, 'Mistureba'),
+(lista_seq.CURRVAL, 1, 'Oscars');
+
+INSERT INTO Watchlist (id_lista) VALUES
+(lista_seq.CURRVAL),
+(lista_seq.CURRVAL),
+(lista_seq.CURRVAL);
+
+INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) VALUES 
 --Lista Privada 1
-INSERT INTO Lista (id) VALUES (NULL);
-INSERT INTO Lista_Personalizada (id_lista,descricao, visibilidade ,titulo) VALUES(lista_seq.CURRVAL, 'Minhas obras japonesas favoritas' , 0, 'Obras Japonesas');
-
-
+(1, 4, 7, SYSTIMESTAMP),
+(1, 12, 7, SYSTIMESTAMP),
+(1, 17, 7, SYSTIMESTAMP),
 --Lista Privada 2
-INSERT INTO Lista (id) VALUES (NULL);
-INSERT INTO Lista_Personalizada (id_lista,descricao, visibilidade ,titulo) 
-VALUES(lista_seq.CURRVAL, 'Absolut Cinema' , 1, 'CINEMA');
-
-
+(2, 4, 4, SYSTIMESTAMP),
+(2, 7, 4, SYSTIMESTAMP),
+(2, 8, 4, SYSTIMESTAMP),
+(2, 10, 4, SYSTIMESTAMP),
+(2, 11, 4, SYSTIMESTAMP),
 --Lista Privada 3
-INSERT INTO Lista (id) VALUES (NULL);
-INSERT INTO Lista_Personalizada (id_lista, visibilidade ,titulo) 
-VALUES(lista_seq.CURRVAL, 0, 'Animacao');
-
+(3, 4, 12, SYSTIMESTAMP),
+(3, 7, 12, SYSTIMESTAMP),
+(3, 15, 12, SYSTIMESTAMP),
+(3, 17, 12, SYSTIMESTAMP),
 --Lista Privada 4
-INSERT INTO Lista (id) VALUES (NULL);
-INSERT INTO Lista_Personalizada (id_lista,descricao, visibilidade ,titulo) 
-VALUES(lista_seq.CURRVAL, 'Quem nao viu veja!' , 1, 'Mistureba');
-
+(4, 1, 19, SYSTIMESTAMP),
+(4, 4, 19, SYSTIMESTAMP),
+(4, 6, 19, SYSTIMESTAMP),
+(4, 9, 19, SYSTIMESTAMP),
 --Lista Privada 5
-INSERT INTO Lista (id) VALUES (NULL);
-INSERT INTO Lista_Personalizada (id_lista, visibilidade ,titulo) 
-VALUES(lista_seq.CURRVAL, 1, 'Oscars');
-
+(5, 2, 19, SYSTIMESTAMP),
+(5, 6, 19, SYSTIMESTAMP),
+(5, 8, 19, SYSTIMESTAMP),
+(5, 9, 19, SYSTIMESTAMP),
+(5, 10, 19, SYSTIMESTAMP),
 --Watchlist 1
-INSERT INTO Lista (id) VALUES (NULL); 
-INSERT INTO Watchlist (id_lista) VALUES (lista_seq.CURRVAL);
-
+(6, 20, 2, SYSTIMESTAMP),
 --Watchlist 2
-INSERT INTO Lista (id) VALUES (NULL);
-INSERT INTO Watchlist (id_lista) VALUES (lista_seq.CURRVAL);
-
+(7, 1, 11, SYSTIMESTAMP),
+(7, 8, 11, SYSTIMESTAMP),
+(7, 9, 11, SYSTIMESTAMP),
 --Watchlist 3
-INSERT INTO Lista (id) VALUES (NULL); 
-INSERT INTO Watchlist (id_lista) VALUES (lista_seq.CURRVAL);
-
---Lista Privada 1
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (1, 4, 7, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (1, 12,7, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (1, 17, 7, SYSTIMESTAMP);
-
---Lista Privada 2
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (2, 4, 4, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (2, 7, 4, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (2, 8, 4, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (2, 10, 4, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (2, 11, 4, SYSTIMESTAMP);
-
---Lista Privada 3
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (3, 4, 12, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (3, 7, 12, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (3, 15, 12, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (3, 17, 12, SYSTIMESTAMP);
-
---Lista Privada 4
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (4, 1, 19, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (4, 4, 19, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (4, 6, 19, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (4, 9, 19, SYSTIMESTAMP);
---Lista Privada 5
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (5, 2, 19, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (5, 6, 19, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (5, 8, 19, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (5, 9, 19, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (5, 10, 19, SYSTIMESTAMP);
-
---Watchlist 1
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (6, 20, 2, SYSTIMESTAMP);
-
---Watchlist 2
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (7, 1, 11, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (7, 8, 11, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (7, 9, 11, SYSTIMESTAMP);
-
---Watchlist 3
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (8, 1, 15, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (8, 8, 15, SYSTIMESTAMP);
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
-VALUES (8, 9, 15, SYSTIMESTAMP);
+(8, 1, 15, SYSTIMESTAMP),
+(8, 8, 15, SYSTIMESTAMP),
+(8, 9, 15, SYSTIMESTAMP);
 
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES
 (3, 7),  -- atl segue jisbra
