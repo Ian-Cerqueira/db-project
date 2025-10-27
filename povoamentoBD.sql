@@ -27,7 +27,7 @@ INSERT INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VA
 ('Um Cão Andaluz', 'curta-metragem', '1929-06-06', 'Surrealismo com imagens impactantes.', 'França/Espanha', 16),
 ('World of Tomorrow', 'curta-metragem', '2015-01-22', 'Viagem de garota ao futuro distante.', 'EUA', 17);
 
-INSERT INTO Idiomas (ID_Obra, Idioma) VALUES
+INSERT INTO Idiomas (id_Obra, idioma) VALUES
 (1, 'Inglês'), (1, 'Russo'), (1, 'Francês'),
 (2, 'Inglês'), (2, 'Russo'),
 (3, 'Inglês'),
@@ -49,7 +49,7 @@ INSERT INTO Idiomas (ID_Obra, Idioma) VALUES
 (19, 'Francês'), (19, 'Espanhol'),
 (20, 'Inglês');
 
-INSERT INTO Genero (ID_Obra, Genero) VALUES
+INSERT INTO Genero (id_Obra, genero) VALUES
 (1, 'Ficção Científica'), (1, 'Aventura'),
 (2, 'Drama'), (2, 'Comédia'),
 (3, 'Drama'), (3, 'Suspense'), (3, 'Crime'),
@@ -120,48 +120,54 @@ INSERT INTO Artistas(nome, bio, data_nascimento) VALUES
 ('Zendaya', 'Zendaya Maree Stoermer Coleman (born September 1, 1996) is an American actress and singer.', '1996-09-01');
 
 -- USUARIOS
-INSERT INTO Usuario (Login, Senha, Nome, Bio, Pronome, Localizacao, Icone_de_perfil) VALUES
-('afol', 'senha123', 'Arthur Fernandes', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('arlindo', 'senha123', 'Arlindo', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('atl', 'senha123', 'Arthur Torres', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('grtc', 'senha123', 'Rio', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('idhec', 'senha123', 'Ian', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('icbo', 'senha123', 'Ítalo', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('jisbra', 'senha123', 'Jesper Ian', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('joaoteles', 'senha123', 'João Teles', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('maf5', 'senha123', 'maia', '', 'Ela/Dela', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('marcosgabriel', 'senha123', 'Marcos Gabriel', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('tam6', 'senha123', 'Thiago', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('victor_ekko', 'senha123', 'Victor', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('uci', 'senha123', 'UCI', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('cherloque', 'senha123', 'cherloque', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('pipocando', 'senha123', 'Bock & Rolandinho', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('peewee', 'senha123', 'PeeWee', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('isabela_boscov', 'senha123', 'Isabela Boscov', '', 'Ela/Dela', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('cinemania', 'senha123', 'CineMania', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('omeleteve', 'senha123', 'Omelete', '', 'Ela/Dela', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
-('cinemarque', 'senha123', 'cinemarque', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png');
+INSERT INTO Usuario (id, nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES
+(1, 'Arthur Fernandes', 'afol', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(2, 'Arlindo', 'arlindo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(3, 'Arthur Torres', 'atl', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(4, 'Rio', 'grtc', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(5, 'Ian', 'idhec', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(6, 'Ítalo', 'icbo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(7, 'Jesper Ian', 'jisbra', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(8, 'João Teles', 'joaoteles', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(9, 'maia', 'maf5', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ela/Dela', 'Brasil', 'Recife'),
+(10, 'Marcos Gabriel', 'marcosgabriel', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(11, 'Thiago', 'tam6', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(12, 'Victor', 'victor_ekko', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(13, 'UCI', 'uci', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(14, 'cherloque', 'cherloque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(15, 'Bock & Rolandinho', 'pipocando', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(16, 'PeeWee', 'peewee', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(17, 'Isabela Boscov', 'isabela_boscov', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ela/Dela', 'Brasil', 'Recife'),
+(18, 'CineMania', 'cinemania', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(19, 'Omelete', 'omeleteve', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ela/Dela', 'Brasil', 'Recife'),
+(20, 'cinemarque', 'cinemarque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
 
-INSERT INTO Estudio (ID_Obra, Nome_do_estudio) VALUES
-(1, 'Metro-Goldwyn-Mayer'),
-(1, 'Stanley Kubrick Productions'),
-(2, 'Neon'),
-(3, 'Paramount Pictures'),
-(4, 'Studio Ghibli'),
-(5, '40 Acres & A Mule Filmworks'),
-(5, 'Universal Pictures'),
-(6, 'A24'),
-(7, 'Universal Pictures'),
-(8, 'Paramount Pictures'),
-(9, 'Universal Pictures'),
-(10, 'Barunson E&A'),
-(11, 'Miramax'),
-(12, 'Daiei Film'),
-(13, 'StudioCanal'),
-(14, 'Sony Pictures Television'),
-(15, 'Cartoon Network Studios'),
-(16, 'ABC Studios'),
-(17, 'Shaft'),
-(18, 'Casa de Cinema de Porto Alegre'),
-(19, 'Les Grands Films Classiques'),
-(20, 'Bitter Films');
+INSERT INTO Estudio (nome, id_obra) VALUES
+('Metro-Goldwyn-Mayer', 1),
+('Stanley Kubrick Productions', 1),
+('Neon', 2),
+('Paramount Pictures', 3),
+('Studio Ghibli', 4),
+('40 Acres & A Mule Filmworks', 5),
+('Universal Pictures', 5),
+('A24', 6),
+('Universal Pictures', 7),
+('Paramount Pictures', 8),
+('Universal Pictures', 9),
+('Barunson E&A', 10),
+('Miramax', 11),
+('Daiei Film', 12),
+('StudioCanal', 13),
+('Sony Pictures Television', 14),
+('Cartoon Network Studios', 15),
+('ABC Studios', 16),
+('Shaft', 17),
+('Casa de Cinema de Porto Alegre', 18),
+('Les Grands Films Classiques', 19),
+('Bitter Films', 20);
+
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoilers) VALUES
+(1, 7, NULL, 'revolucionário', 5, 0),
+(14, 1, NULL, '5 estrelas pelos memes', 5, 0),
+(7, 2, NULL, 'peak', 4, 0),
+(8, 6, NULL, 'Me fizeram uma proposta que não pude recusar', NULL, 0);
