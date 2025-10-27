@@ -1,5 +1,29 @@
 /* Talvez adicionar mais checks e definir a situação do assistiu/log-compartilhado */
 
+DROP TABLE Obra CASCADE CONSTRAINTS;
+DROP TABLE Estudio CASCADE CONSTRAINTS;
+DROP TABLE Idiomas CASCADE CONSTRAINTS;
+DROP TABLE Genero CASCADE CONSTRAINTS;
+DROP TABLE Posters CASCADE CONSTRAINTS;
+DROP TABLE Tags CASCADE CONSTRAINTS;
+DROP TABLE Nacionalidades CASCADE CONSTRAINTS;
+DROP TABLE Usuario CASCADE CONSTRAINTS;
+DROP TABLE Artistas CASCADE CONSTRAINTS;
+DROP TABLE Lista CASCADE CONSTRAINTS;
+DROP TABLE Watchlist CASCADE CONSTRAINTS;
+DROP TABLE Lista_Personalizada CASCADE CONSTRAINTS;
+DROP TABLE Review CASCADE CONSTRAINTS;
+DROP TABLE Entrada_do_Log CASCADE CONSTRAINTS;
+DROP TABLE Participou CASCADE CONSTRAINTS;
+DROP TABLE Funcoes CASCADE CONSTRAINTS;
+DROP TABLE Segue CASCADE CONSTRAINTS;
+DROP TABLE Assistiu CASCADE CONSTRAINTS;
+DROP TABLE Adicionou CASCADE CONSTRAINTS;
+DROP TABLE Curtiu_Obra CASCADE CONSTRAINTS;
+DROP TABLE Curtiu_Lista CASCADE CONSTRAINTS;
+DROP TABLE Curtiu_Review CASCADE CONSTRAINTS;
+DROP TABLE Log_Compartilhado CASCADE CONSTRAINTS;
+
 CREATE TABLE Obra (
     id NUMBER,
     nome VARCHAR2(200) NOT NULL,
@@ -190,24 +214,24 @@ CREATE TABLE Segue (
     CONSTRAINT Segue_fkey FOREIGN KEY(id_seguidor)
         REFERENCES Usuario(id),
     CONSTRAINT Segue_fkey FOREIGN KEY(id_seguido)
-        REFERENCES Usuario(id),
+        REFERENCES Usuario(id)
 
 );
 
--- CREATE TABLE Assistiu (
---     id_obra NUMBER,
---     id_usuario NUMBER,
---     data_assistida DATE NOT NULL,
---     reassistindo CHAR(1) DEFAULT '0', /* 1 -> reassistindo, 0 -> não reassistindo */
+CREATE TABLE Assistiu (
+    id_obra NUMBER,
+    id_usuario NUMBER,
+    data_assistida DATE NOT NULL,
+    reassistindo CHAR(1) DEFAULT '0', /* 1 -> reassistindo, 0 -> não reassistindo */
 
---     CONSTRAINT Assistiu_pkey PRIMARY KEY(id_obra, id_usuario),
---     CONSTRAINT Assistiu_fkey_Obra FOREIGN KEY(id_obra)
---         REFERENCES Obra(id),
---     CONSTRAINT Assistiu_fkey_Usuario FOREIGN KEY(id_usuario)
---         REFERENCES Usuario(id),
---     CONSTRAINT Assistiu_ck_reassistindo CHECK(reassistindo IN ('1', '0'))
+    CONSTRAINT Assistiu_pkey PRIMARY KEY(id_obra, id_usuario),
+    CONSTRAINT Assistiu_fkey_Obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id),
+    CONSTRAINT Assistiu_fkey_Usuario FOREIGN KEY(id_usuario)
+        REFERENCES Usuario(id),
+    CONSTRAINT Assistiu_ck_reassistindo CHECK(reassistindo IN ('1', '0'))
 
--- ); 
+); 
 
 CREATE TABLE Adicionou (
     id_lista NUMBER,
