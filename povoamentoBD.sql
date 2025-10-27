@@ -194,3 +194,10 @@ INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, pos
 (14, 1, NULL, '5 estrelas pelos memes', 5, 0),
 (7, 2, NULL, 'peak', 4, 0),
 (8, 6, NULL, 'Me fizeram uma proposta que não pude recusar', NULL, 0);
+
+INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES
+(1, 16, 'Diretor'),
+(12, 1, 'Diretor'),
+(3, 13, 'Ator'),
+(3, 15, 'Ator'),
+(7, 18, 'Ator');
