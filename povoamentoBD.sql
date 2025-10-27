@@ -16,16 +16,16 @@ INSERT INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VA
 
 -- SERIADO
 INSERT INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
-('Breaking Bad - A Química do Mal', 'seriado', '2008-01-20', 'Professor faz metanfetamina após diagnóstico de câncer.', 'EUA', 2953),
-('O Segredo Além do Jardim', 'seriado', '2014-11-03', 'Dois irmãos em aventura surreal.', 'EUA', 109),
-('Lost', 'seriado', '2004-09-22', 'Sobreviventes de acidente lutam em ilha.', 'EUA', 5460),
-('Puella Magi Madoka Magica', 'seriado', '2011-01-07', 'Garotas recebem poderes mágicos.', 'Japão', 300);
+('Breaking Bad - A Química do Mal', 'Seriado', TO_DATE('2008-01-20', 'YYYY-MM-DD'), 'Professor faz metanfetamina após diagnóstico de câncer.', 'EUA', 2953),
+('O Segredo Além do Jardim', 'Seriado', TO_DATE('2014-11-03', 'YYYY-MM-DD'), 'Dois irmãos em aventura surreal.', 'EUA', 109),
+('Lost', 'Seriado', TO_DATE('2004-09-22', 'YYYY-MM-DD'), 'Sobreviventes de acidente lutam em ilha.', 'EUA', 5460),
+('Puella Magi Madoka Magica', 'Seriado', TO_DATE('2011-01-07', 'YYYY-MM-DD'), 'Garotas recebem poderes mágicos.', 'Japão', 300);
 
 -- CURTA-METRAGEM
 INSERT INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
-('Ilha das Flores', 'curta-metragem', '1989-03-11', 'Curta de sátira sobre desigualdade.', 'Brasil', 13),
-('Um Cão Andaluz', 'curta-metragem', '1929-06-06', 'Surrealismo com imagens impactantes.', 'França/Espanha', 16),
-('World of Tomorrow', 'curta-metragem', '2015-01-22', 'Viagem de garota ao futuro distante.', 'EUA', 17);
+('Ilha das Flores', 'Curta-Metragem', TO_DATE('1989-03-11', 'YYYY-MM-DD'), 'Curta de sátira sobre desigualdade.', 'Brasil', 13),
+('Um Cão Andaluz', 'Curta-Metragem', TO_DATE('1929-06-06', 'YYYY-MM-DD'), 'Surrealismo com imagens impactantes.', 'França/Espanha', 16),
+('World of Tomorrow', 'Curta-Metragem', TO_DATE('2015-01-22', 'YYYY-MM-DD'), 'Viagem de garota ao futuro distante.', 'EUA', 17);
 
 INSERT INTO Idiomas (id_Obra, idioma) VALUES
 (1, 'Inglês'), (1, 'Russo'), (1, 'Francês'),
