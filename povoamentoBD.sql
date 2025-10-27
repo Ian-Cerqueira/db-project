@@ -119,6 +119,29 @@ INSERT INTO Artistas(nome, bio, data_nascimento) VALUES
 ('Winona Ryder', 'Winona Laura Horowitz (born October 29, 1971), known professionally as Winona Ryder, is an American actress.', '1971-10-29'),
 ('Zendaya', 'Zendaya Maree Stoermer Coleman (born September 1, 1996) is an American actress and singer.', '1996-09-01');
 
+INSERT INTO Nacionalidades(id_artista, nacionalidade) VALUES
+(1, 'Japão'),
+(2, 'País de Gales'),
+(3, 'Estados Unidos da América'),
+(4, 'Brasil'),
+(5, 'Inglaterra'),
+(6, 'Estados Unidos da América'),
+(7, 'Estados Unidos da América'),
+(8, 'Reino Unido'),
+(9, 'Estados Unidos da América'),
+(10, 'Estados Unidos da América'),
+(11, 'Brasil'),
+(12, 'Brasil'),
+(13, 'Estados Unidos da América'),
+(14, 'Estados Unidos da América'),
+(14, 'Israel'),
+(15, 'Estados Unidos da América'),
+(16, 'Estados Unidos da América'),
+(17, 'Estados Unidos da América'),
+(18, 'Brasil'),
+(19, 'Estados Unidos da América'),
+(20, 'Estados Unidos da América');
+
 -- USUARIOS
 INSERT INTO Usuario (id, nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES
 (1, 'Arthur Fernandes', 'afol', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
