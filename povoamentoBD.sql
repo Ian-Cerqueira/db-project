@@ -1,18 +1,18 @@
 -- LONGA-METRAGEM
 INSERT INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
-('2001: Uma Odisseia no Espaço', 'longa-metragem', '1968-04-02', 'Equipe espacial descobre mistério durante viagem a Júpiter.', 'Reino Unido', 149),
-('Anora', 'longa-metragem', '2024-05-20', 'Stripper russa no Brooklyn vive romance inesperado com herdeiro de oligarca.', 'EUA', 110),
-('Assassinos da Lua das Flores', 'longa-metragem', '2023-10-19', 'Crimes em tribo Osage na década de 1920.', 'EUA', 206),
-('A Viagem de Chihiro', 'longa-metragem', '2001-07-20', 'Menina entra em mundo mágico para salvar pais.', 'Japão', 125),
-('Faça a Coisa Certa', 'longa-metragem', '1989-06-30', 'Tensões raciais em dia quente no Brooklyn.', 'EUA', 120),
-('Moonlight: Sob a Luz do Luar', 'longa-metragem', '2016-10-21', 'Jovem enfrenta desafios em Miami.', 'EUA', 111),
-('O Gato das Botas: O Último Desejo', 'longa-metragem', '2022-12-21', 'Gato busca desejo para recuperar suas nove vidas.', 'EUA', 102),
-('O Poderoso Chefão', 'longa-metragem', '1972-03-24', 'Saga da família mafiosa Corleone.', 'EUA', 175),
-('Oppenheimer', 'longa-metragem', '2023-07-20', 'Criador da bomba atômica lida com dilemas.', 'EUA', 180),
-('Parasita', 'longa-metragem', '2019-05-30', 'Família se infiltra em casa de ricos.', 'Coreia do Sul', 132),
-('Pulp Fiction: Tempo de Violência', 'longa-metragem', '1994-09-10', 'Histórias interligadas do submundo de LA.', 'EUA', 154),
-('Rashomon', 'longa-metragem', '1950-08-25', 'Crime contado sob diferentes perspectivas.', 'Japão', 88),
-('Senna: O Brasileiro, O Herói, O Campeão', 'longa-metragem', '2010-10-07', 'Documentário sobre Ayrton Senna.', 'Reino Unido', 106);
+('2001: Uma Odisseia no Espaço', 'Longa-Metragem', TO_DATE('1968-04-02', 'YYYY-MM-DD'), 'Equipe espacial descobre mistério durante viagem a Júpiter.', 'Reino Unido', 149),
+('Anora', 'Longa-Metragem', TO_DATE('2024-05-20', 'YYYY-MM-DD'), 'Stripper russa no Brooklyn vive romance inesperado com herdeiro de oligarca.', 'EUA', 110),
+('Assassinos da Lua das Flores', 'Longa-Metragem', TO_DATE('2023-10-19', 'YYYY-MM-DD'), 'Crimes em tribo Osage na década de 1920.', 'EUA', 206),
+('A Viagem de Chihiro', 'Longa-Metragem', TO_DATE('2001-07-20', 'YYYY-MM-DD'), 'Menina entra em mundo mágico para salvar pais.', 'Japão', 125),
+('Faça a Coisa Certa', 'Longa-Metragem', TO_DATE('1989-06-30', 'YYYY-MM-DD'), 'Tensões raciais em dia quente no Brooklyn.', 'EUA', 120),
+('Moonlight: Sob a Luz do Luar', 'Longa-Metragem', TO_DATE('2016-10-21', 'YYYY-MM-DD'), 'Jovem enfrenta desafios em Miami.', 'EUA', 111),
+('O Gato das Botas: O Último Desejo', 'Longa-Metragem', TO_DATE('2022-12-21', 'YYYY-MM-DD'), 'Gato busca desejo para recuperar suas nove vidas.', 'EUA', 102),
+('O Poderoso Chefão', 'Longa-Metragem', TO_DATE('1972-03-24', 'YYYY-MM-DD'), 'Saga da família mafiosa Corleone.', 'EUA', 175),
+('Oppenheimer', 'Longa-Metragem', TO_DATE('2023-07-20', 'YYYY-MM-DD'), 'Criador da bomba atômica lida com dilemas.', 'EUA', 180),
+('Parasita', 'Longa-Metragem', TO_DATE('2019-05-30', 'YYYY-MM-DD'), 'Família se infiltra em casa de ricos.', 'Coreia do Sul', 132),
+('Pulp Fiction: Tempo de Violência', 'Longa-Metragem', TO_DATE('1994-09-10', 'YYYY-MM-DD'), 'Histórias interligadas do submundo de LA.', 'EUA', 154),
+('Rashomon', 'Longa-Metragem', TO_DATE('1950-08-25', 'YYYY-MM-DD'), 'Crime contado sob diferentes perspectivas.', 'Japão', 88),
+('Senna: O Brasileiro, O Herói, O Campeão', 'Longa-Metragem', TO_DATE('2010-10-07', 'YYYY-MM-DD'), 'Documentário sobre Ayrton Senna.', 'Reino Unido', 106);
 
 -- SERIADO
 INSERT INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
