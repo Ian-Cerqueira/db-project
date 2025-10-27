@@ -73,51 +73,51 @@ INSERT INTO Genero (ID_Obra, Genero) VALUES
 
 -- POSTERS
 INSERT INTO Posters (id_obra, poster) VALUES
-(1, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg')
-(1, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zmmYdPa8Lxx999Af9vnVP4XQ1V6.jpg')
-(1, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nRsTL3djLDBcnMNoBugqobFe7ii.jpg')
-(2, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/davwb31ZFhBUrZuRlxk8meRfATI.jpg')
-(3, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg')
-(4, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg')
-(5, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/63rmSDPahrH7C1gEFYzRuIBAN9W.jpg')
-(6, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rcICfiL9fvwRjoWHxW8QeroLYrJ.jpg')
-(7, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kuf6dutpsT0vSVehic3EZIqkOBt.jpg')
-(8, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3bhkrj58Vtu7enYsRolD1fZdja1.jpg')
-(9, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg')
-(10, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg')
-(11, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg')
-(12, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vL7Xw04nFMHwnvXRFCmYYAzMUvY.jpg')
-(13, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nZbLCbRoP6iJq5sr8daHQzjnzFh.jpg')
-(14, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg')
-(15, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/m3lU8n7WxzMecxKZcqhq5y5ESy.jpg')
-(16, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/og6S0aTZU6YUJAbqxeKjCa3kY1E.jpg')
-(17, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9Leopb4OB9j9FkP5JNHRZZlPPdg.jpg')
-(18, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cghvWnWK5AuIKPY92YRV9tCeNhw.jpg')
-(19, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/obvE7ElAvCUhKtWFwDSvNbPw9PV.jpg')
-(20, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5s7DSOek7Bk2CvcG1zX01bJzJ0x.jpg')
+(1, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg'),
+(1, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zmmYdPa8Lxx999Af9vnVP4XQ1V6.jpg'),
+(1, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nRsTL3djLDBcnMNoBugqobFe7ii.jpg'),
+(2, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/davwb31ZFhBUrZuRlxk8meRfATI.jpg'),
+(3, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg'),
+(4, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg'),
+(5, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/63rmSDPahrH7C1gEFYzRuIBAN9W.jpg'),
+(6, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rcICfiL9fvwRjoWHxW8QeroLYrJ.jpg'),
+(7, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kuf6dutpsT0vSVehic3EZIqkOBt.jpg'),
+(8, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3bhkrj58Vtu7enYsRolD1fZdja1.jpg'),
+(9, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg'),
+(10, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg'),
+(11, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg'),
+(12, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vL7Xw04nFMHwnvXRFCmYYAzMUvY.jpg'),
+(13, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/nZbLCbRoP6iJq5sr8daHQzjnzFh.jpg'),
+(14, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg'),
+(15, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/m3lU8n7WxzMecxKZcqhq5y5ESy.jpg'),
+(16, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/og6S0aTZU6YUJAbqxeKjCa3kY1E.jpg'),
+(17, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9Leopb4OB9j9FkP5JNHRZZlPPdg.jpg'),
+(18, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/cghvWnWK5AuIKPY92YRV9tCeNhw.jpg'),
+(19, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/obvE7ElAvCUhKtWFwDSvNbPw9PV.jpg'),
+(20, 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5s7DSOek7Bk2CvcG1zX01bJzJ0x.jpg');
 
 -- ARTISTAS
 INSERT INTO Artistas(nome, bio, data_nascimento) VALUES
-('Akira Kurosawa', 'Akira Kurosawa (黒澤 明) was a Japanese filmmaker and painter who directed thirty films in a career spanning over five decades. He is widely regarded as one of the greatest and most influential filmmakers in the history of cinema.', '1910-03-23')
-('Anthony Hopkins', 'Sir Philip Anthony Hopkins CBE (born December 31, 1937) is a Welsh actor, film director, and film producer.', '1937-12-31')
-('Eddie Murphy', 'Edward "Eddie" Regan Murphy (born April 3, 1961) is an American actor, voice actor, film director, producer, comedian, and singer.', '1961-04-03')
-('Fernanda Torres', 'Fernanda Pinheiro Torres (Rio de Janeiro, September 15, 1965), is a Brazilian actress, writer, columnist and screenwriter.', '1965-09-15')
-('Florence Pugh', 'Florence Pugh (/pjuː/ PEW; born 3 January 1996) is an English actress.', '1996-01-03')
-('Greta Gerwig', 'Greta Gerwig is an American actress, playwright, screenwriter, and director based in NY.', '1983-08-04')
-('Harrison Ford', 'Legendary Hollywood Icon Harrison Ford was born on July 13, 1942 in Chicago, Illinois.', '1942-07-13')
-('Idris Elba', 'Idris Elba (born September 6, 1972) is a British television, theatre, and film actor who has starred in both British and American productions.', '1972-09-06' )
-('John Williams', 'John Towner Williams (born February 8, 1932) is an American composer and conductor.', '1932-02-08')
-('Julia Roberts', 'Julia Fiona Roberts (born October 28, 1967) is an American actress. ', '1967-10-28')
-('Kleber Mendonça Filho', 'Kleber Mendonça Filho (born 1968) is a film director, screenwriter, producer, and critic, born in Recife, Pernambuco, Brazil.', '1968-11-22')
-('Lázaro Ramos', 'Luís Lázaro Sacramento Ramos (born November 1, 1978) is a Brazilian actor, presenter, director, writer and voice actor.', '1978-10-01')
-('Leonardo DiCaprio', 'Leonardo Wilhelm DiCaprio (born November 11, 1974) is an American actor and film producer.' '1974-11-11')
-('Natalie Portman', 'Natalie Portman (born Neta-Lee Hershlag, June 9, 1981) is an actress with dual American and Israeli citizenship.', '1981-06-09')
-('Robert DeNiro', 'Robert Anthony De Niro (born August 17, 1943) is an American actor and film producer.', '1943-08-17')
-('Stanley Kubrick', 'Stanley Kubrick (July 26, 1928 – March 7, 1999) was an American film director, writer, producer, and photographer who lived in England during most of the last four decades of his career.', '1928-07-26')
-('Viola Davis', 'Viola Davis (/vaɪˈoʊlə/ vy-OH-lə; born August 11, 1965) is an American actress and film producer.', '1965-08-11')
-('Wagner Moura', 'Wagner Maniçoba de Moura (born June 27, 1976) is a Brazilian actor, director and musician.', '1976-06-27')
-('Winona Ryder', 'Winona Laura Horowitz (born October 29, 1971), known professionally as Winona Ryder, is an American actress.', '1971-10-29')
-('Zendaya', 'Zendaya Maree Stoermer Coleman (born September 1, 1996) is an American actress and singer.', '1996-09-01')
+('Akira Kurosawa', 'Akira Kurosawa (黒澤 明) was a Japanese filmmaker and painter who directed thirty films in a career spanning over five decades. He is widely regarded as one of the greatest and most influential filmmakers in the history of cinema.', '1910-03-23'),
+('Anthony Hopkins', 'Sir Philip Anthony Hopkins CBE (born December 31, 1937) is a Welsh actor, film director, and film producer.', '1937-12-31'),
+('Eddie Murphy', 'Edward "Eddie" Regan Murphy (born April 3, 1961) is an American actor, voice actor, film director, producer, comedian, and singer.', '1961-04-03'),
+('Fernanda Torres', 'Fernanda Pinheiro Torres (Rio de Janeiro, September 15, 1965), is a Brazilian actress, writer, columnist and screenwriter.', '1965-09-15'),
+('Florence Pugh', 'Florence Pugh (/pjuː/ PEW; born 3 January 1996) is an English actress.', '1996-01-03'),
+('Greta Gerwig', 'Greta Gerwig is an American actress, playwright, screenwriter, and director based in NY.', '1983-08-04'),
+('Harrison Ford', 'Legendary Hollywood Icon Harrison Ford was born on July 13, 1942 in Chicago, Illinois.', '1942-07-13'),
+('Idris Elba', 'Idris Elba (born September 6, 1972) is a British television, theatre, and film actor who has starred in both British and American productions.', '1972-09-06' ),
+('John Williams', 'John Towner Williams (born February 8, 1932) is an American composer and conductor.', '1932-02-08'),
+('Julia Roberts', 'Julia Fiona Roberts (born October 28, 1967) is an American actress. ', '1967-10-28'),
+('Kleber Mendonça Filho', 'Kleber Mendonça Filho (born 1968) is a film director, screenwriter, producer, and critic, born in Recife, Pernambuco, Brazil.', '1968-11-22'),
+('Lázaro Ramos', 'Luís Lázaro Sacramento Ramos (born November 1, 1978) is a Brazilian actor, presenter, director, writer and voice actor.', '1978-10-01'),
+('Leonardo DiCaprio', 'Leonardo Wilhelm DiCaprio (born November 11, 1974) is an American actor and film producer.', '1974-11-11'),
+('Natalie Portman', 'Natalie Portman (born Neta-Lee Hershlag, June 9, 1981) is an actress with dual American and Israeli citizenship.', '1981-06-09'),
+('Robert DeNiro', 'Robert Anthony De Niro (born August 17, 1943) is an American actor and film producer.', '1943-08-17'),
+('Stanley Kubrick', 'Stanley Kubrick (July 26, 1928 – March 7, 1999) was an American film director, writer, producer, and photographer who lived in England during most of the last four decades of his career.', '1928-07-26'),
+('Viola Davis', 'Viola Davis (/vaɪˈoʊlə/ vy-OH-lə; born August 11, 1965) is an American actress and film producer.', '1965-08-11'),
+('Wagner Moura', 'Wagner Maniçoba de Moura (born June 27, 1976) is a Brazilian actor, director and musician.', '1976-06-27'),
+('Winona Ryder', 'Winona Laura Horowitz (born October 29, 1971), known professionally as Winona Ryder, is an American actress.', '1971-10-29'),
+('Zendaya', 'Zendaya Maree Stoermer Coleman (born September 1, 1996) is an American actress and singer.', '1996-09-01');
 
 -- USUARIOS
 INSERT INTO Usuario (Login, Senha, Nome, Bio, Pronome, Localizacao, Icone_de_perfil) VALUES

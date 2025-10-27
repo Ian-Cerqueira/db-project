@@ -87,16 +87,6 @@ CREATE TABLE Tags (
 
 );
 
-CREATE TABLE Nacionalidades (
-    id_obra NUMBER,
-    nacionalidade VARCHAR2(50),
-
-    CONSTRAINT Nacionalidades_pkey PRIMARY KEY(id_obra, nacionalidade),
-    CONSTRAINT Nacionalidades_fkey FOREIGN KEY(id_obra)
-        REFERENCES Obra(id)
-
-);
-
 CREATE TABLE Usuario (
     id NUMBER,
     nome VARCHAR2(200) NOT NULL,
@@ -119,6 +109,16 @@ CREATE TABLE Artistas (
     data_nascimento DATE NOT NULL,
 
     CONSTRAINT Artista_pkey PRIMARY KEY(id)
+
+);
+
+CREATE TABLE Nacionalidades (
+    id_artista NUMBER,
+    nacionalidade VARCHAR2(50),
+
+    CONSTRAINT Nacionalidades_pkey PRIMARY KEY(id_artista, nacionalidade),
+    CONSTRAINT Nacionalidades_fkey FOREIGN KEY(id_artista)
+        REFERENCES Artistas(id)
 
 );
 
