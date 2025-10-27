@@ -152,7 +152,7 @@ CREATE TABLE Lista_Personalizada (
 CREATE TABLE Review (
     id_obra NUMBER,
     id_usuario NUMBER,
-    instante_avalicao TIMESTAMP,
+    instante_avaliacao TIMESTAMP,
     conteudo VARCHAR2(1000) NOT NULL,
     nota NUMBER NOT NULL,
     possui_spoiler CHAR(1) DEFAULT '0' /* 1 -> possui spoiler, 0 -> não possui spoiler */

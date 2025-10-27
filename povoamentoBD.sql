@@ -281,6 +281,7 @@ VALUES (4, 6, 19, SYSTIMESTAMP);
 INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
 VALUES (4, 9, 19, SYSTIMESTAMP);
 --Lista Privada 5
+INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
 VALUES (5, 2, 19, SYSTIMESTAMP);
 INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
 VALUES (5, 6, 19, SYSTIMESTAMP);
@@ -310,3 +311,13 @@ INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao)
 VALUES (8, 8, 15, SYSTIMESTAMP);
 INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) 
 VALUES (8, 9, 15, SYSTIMESTAMP);
+
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES
+(3, 7),  -- atl segue jisbra
+(5, 7),  -- idhec segue jisbra
+(2, 1),  -- arlindo segue afol
+(4, 2),  -- grtc segue arlindo
+(8, 4),  -- joaoteles segue grtc
+(9, 4),  -- maf5 segue grtc
+(10, 9), -- marcosgabriel segue maf5
+(15, 11);-- pipocando segue tam6
