@@ -118,3 +118,26 @@ INSERT INTO Artistas(nome, bio, data_nascimento) VALUES
 ('Wagner Moura', 'Wagner Maniçoba de Moura (born June 27, 1976) is a Brazilian actor, director and musician.', '1976-06-27')
 ('Winona Ryder', 'Winona Laura Horowitz (born October 29, 1971), known professionally as Winona Ryder, is an American actress.', '1971-10-29')
 ('Zendaya', 'Zendaya Maree Stoermer Coleman (born September 1, 1996) is an American actress and singer.', '1996-09-01')
+
+-- USUARIOS
+INSERT INTO Usuario (Login, Senha, Nome, Bio, Pronome, Localizacao, Icone_de_perfil) VALUES
+('afol', 'senha123', 'Arthur Fernandes', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('arlindo', 'senha123', 'Arlindo', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('atl', 'senha123', 'Arthur Torres', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('grtc', 'senha123', 'Rio', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('idhec', 'senha123', 'Ian', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('icbo', 'senha123', 'Ítalo', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('jisbra', 'senha123', 'Jesper Ian', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('joaoteles', 'senha123', 'João Teles', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('maf5', 'senha123', 'maia', '', 'Ela/Dela', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('marcosgabriel', 'senha123', 'Marcos Gabriel', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('tam6', 'senha123', 'Thiago', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('victor_ekko', 'senha123', 'Victor', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('uci', 'senha123', 'UCI', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('cherloque', 'senha123', 'cherloque', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('pipocando', 'senha123', 'Bock & Rolandinho', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('peewee', 'senha123', 'PeeWee', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('isabela_boscov', 'senha123', 'Isabela Boscov', '', 'Ela/Dela', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('cinemania', 'senha123', 'CineMania', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('omeleteve', 'senha123', 'Omelete', '', 'Ela/Dela', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
+('cinemarque', 'senha123', 'cinemarque', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png');
