@@ -164,3 +164,10 @@ INSERT INTO Usuario (Login, Senha, Nome, Bio, Pronome, Localizacao, Icone_de_per
 ('cinemania', 'senha123', 'CineMania', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
 ('omeleteve', 'senha123', 'Omelete', '', 'Ela/Dela', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
 ('cinemarque', 'senha123', 'cinemarque', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png');
+
+INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES
+(1, 16, 'Diretor'),
+(12, 1, 'Diretor'),
+(3, 13, 'Ator'),
+(3, 15, 'Ator'),
+(7, 18, 'Ator');
