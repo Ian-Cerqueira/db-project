@@ -157,7 +157,7 @@ CREATE TABLE Review (
     nota NUMBER NOT NULL,
     possui_spoiler CHAR(1) DEFAULT '0' /* 1 -> possui spoiler, 0 -> não possui spoiler */
 
-    CONSTRAINT Review_ck_nota CHECK(nota BETWEEN 0 AND 5),
+    CONSTRAINT Review_ck_nota CHECK (nota BETWEEN 1 AND 5 OR nota IS NULL),
     CONSTRAINT Review_ck_spoiler CHECK(possui_spoiler in ('1', '0')),
     CONSTRAINT Review_pkey PRIMARY KEY(id_obra, id_usuario, instante_avalicao),
     CONSTRAINT Review_fkey_obra FOREIGN KEY(id_obra)
