@@ -171,7 +171,9 @@ CREATE TABLE Entrada_do_log (
     id_obra NUMBER,
     id_usuario NUMBER,
     instante_log TIMESTAMP,
+    reassistindo char(1),
 
+    CONSTRAINT Entrada_do_log_reassistindo CHECK(reassistindo in ('1', '0')),
     CONSTRAINT Entrada_do_log_pkey PRIMARY KEY(id_obra, id_usuario, instante_log),
     CONSTRAINT Entrada_do_log_fkey_Obra FOREIGN KEY(id_obra)
         REFERENCES Obra(id),
@@ -281,12 +283,8 @@ CREATE TABLE Curtiu_Review (
     CONSTRAINT Curtiu_Review_pkey PRIMARY KEY(id_usuario_curtidor, id_usuario_autor, id_obra, instante_review),
     CONSTRAINT Curtiu_Review_fkey_curtidor FOREIGN KEY(id_usuario_curtidor)
         REFERENCES Usuario(id),
-    CONSTRAINT Curtiu_Review_fkey_autor FOREIGN KEY(id_usuario_autor)
-        REFERENCES Usuario(id),
-    CONSTRAINT Curtiu_Review_fkey_Obra FOREIGN KEY(id_obra)
-        REFERENCES Obra(id),
-    CONSTRAINT Curtiu_Review_fkey_instantereview FOREIGN KEY(instante_review)
-        REFERENCES Review(instante_avaliacao)
+    CONSTRAINT Curtiu_Review_fkey_instantereview FOREIGN KEY(id_obra, id_usuario_autor, instante_review)
+        REFERENCES Review(id_obra, id_usuario, instante_avaliacao)
 
 );
 

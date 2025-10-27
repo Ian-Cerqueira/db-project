@@ -143,27 +143,27 @@ INSERT INTO Nacionalidades(id_artista, nacionalidade) VALUES
 (20, 'Estados Unidos da América');
 
 -- USUARIOS
-INSERT INTO Usuario (id, nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES
-(1, 'Arthur Fernandes', 'afol', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(2, 'Arlindo', 'arlindo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(3, 'Arthur Torres', 'atl', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(4, 'Rio', 'grtc', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(5, 'Ian', 'idhac', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(6, 'Ítalo', 'icbo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(7, 'Jesper Ian', 'jisbra', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(8, 'João Teles', 'joaoteles', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(9, 'maia', 'maf5', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'Recife'),
-(10, 'Marcos Gabriel', 'marcosgabriel', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(11, 'Thiago', 'tam6', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(12, 'Victor', 'victor_ekko', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(13, 'UCI', 'uci', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(14, 'cherloque', 'cherloque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(15, 'BockRolandinho', 'pipocando', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(16, 'PeeWee', 'peewee', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(17, 'Isabela Boscov', 'isabela_boscov', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'Recife'),
-(18, 'CineMania', 'cinemania', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
-(19, 'Omelete', 'omeleteve', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'Recife'),
-(20, 'cinemarque', 'cinemarque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES
+('Arthur Fernandes', 'afol', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Arlindo', 'arlindo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Arthur Torres', 'atl', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Rio', 'grtc', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Ian', 'idhac', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Ítalo', 'icbo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Jesper Ian', 'jisbra', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('João Teles', 'joaoteles', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('maia', 'maf5', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'Recife'),
+('Marcos Gabriel', 'marcosgabriel', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Thiago', 'tam6', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Victor', 'victor_ekko', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('UCI', 'uci', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('cherloque', 'cherloque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('BockRolandinho', 'pipocando', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('PeeWee', 'peewee', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Isabela Boscov', 'isabela_boscov', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'Recife'),
+('CineMania', 'cinemania', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife'),
+('Omelete', 'omeleteve', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'Recife'),
+('cinemarque', 'cinemarque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
 
 INSERT INTO Estudio (nome, id_obra) VALUES
 ('Metro-Goldwyn-Mayer', 1),
@@ -171,13 +171,13 @@ INSERT INTO Estudio (nome, id_obra) VALUES
 ('Neon', 2),
 ('Paramount Pictures', 3),
 ('Studio Ghibli', 4),
-('40 Acres & A Mule Filmworks', 5),
+('40 Acres A Mule Filmworks', 5),
 ('Universal Pictures', 5),
 ('A24', 6),
 ('Universal Pictures', 7),
 ('Paramount Pictures', 8),
 ('Universal Pictures', 9),
-('Barunson E&A', 10),
+('Barunson EA', 10),
 ('Miramax', 11),
 ('Daiei Film', 12),
 ('StudioCanal', 13),
@@ -204,16 +204,22 @@ INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES
 (7, 18, 'Ator');
 
 -- Listas Personalizadas
-INSERT INTO Lista_Personalizada (id_lista,descricao, visibilidade ,titulo) VALUES
-(lista_seq.CURRVAL, 'Minhas obras japonesas favoritas' , 0, 'Obras Japonesas'),
-(lista_seq.CURRVAL, 'Absolut Cinema' , 1, 'CINEMA'),
-(lista_seq.CURRVAL, 0, 'Animacao'),
-(lista_seq.CURRVAL, 'Quem nao viu veja!' , 1, 'Mistureba'),
-(lista_seq.CURRVAL, 1, 'Oscars');
+INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
+(lista_seq.CURRVAL, 'Minhas obras japonesas favoritas', '0', 'Obras Japonesas');
+INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
+(lista_seq.CURRVAL, 'Absolut Cinema', '1', 'CINEMA');
+INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
+(lista_seq.CURRVAL, NULL, '0', 'Animacao');
+INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
+(lista_seq.CURRVAL, 'Quem nao viu veja!', '1', 'Mistureba');
+INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
+(lista_seq.CURRVAL, NULL, '1', 'Oscars');
 
 INSERT INTO Watchlist (id_lista) VALUES
-(lista_seq.CURRVAL),
-(lista_seq.CURRVAL),
+(lista_seq.CURRVAL);
+INSERT INTO Watchlist (id_lista) VALUES
+(lista_seq.CURRVAL);
+INSERT INTO Watchlist (id_lista) VALUES
 (lista_seq.CURRVAL);
 
 INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) VALUES 
@@ -288,7 +294,7 @@ INSERT INTO Curtiu_Obra(id_usuario, id_obra) VALUES
 (16, 20), (17, 14), (17, 5), (19, 11), 
 (19, 12), (20, 20), (20, 6), (20, 1);
 
-INSERT INTO Curtiu_Lista(id_usuario, id_obra) VALUES
+INSERT INTO Curtiu_Lista(id_usuario, id_lista) VALUES
 (1, 2), (2,2), (3, 2), (3, 4),
 (5, 2), (5, 5), (6, 2), (6, 4),
 (7, 2), (7,4), (8, 2), (8, 4),
