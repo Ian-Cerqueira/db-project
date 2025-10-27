@@ -297,13 +297,9 @@ CREATE TABLE Log_compartilhado (
     instante_log TIMESTAMP,
     
     CONSTRAINT Log_compartilhado_pkey PRIMARY KEY(id_obra, id_usuario_log, id_usuario_compartilhador, instante_log),
-    CONSTRAINT Log_compartilhado_fkey_Obra FOREIGN KEY(id_obra)
-        REFERENCES Obra(id),
-    CONSTRAINT Log_compartilhado_fkey_Usuariolog FOREIGN KEY(id_usuario_log)
-        REFERENCES Usuario(id),
     CONSTRAINT Log_compartilhado_fkey_compartilhador FOREIGN KEY(id_usuario_compartilhador)
         REFERENCES Usuario(id),
-    CONSTRAINT Log_compartilhado_fkey_instantelog FOREIGN KEY(instante_log)
-        REFERENCES Entrada_do_log(instante_log)
+    CONSTRAINT Log_compartilhado_fkey_instantelog FOREIGN KEY(id_obra, id_usuario_log, instante_log)
+        REFERENCES Entrada_do_log(id_obra, id_usuario, instante_log)
 
 );
