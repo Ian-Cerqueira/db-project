@@ -276,7 +276,7 @@ CREATE TABLE Curtiu_Review (
     id_usuario_curtidor NUMBER,
     id_usuario_autor NUMBER,
     id_obra NUMBER,
-    instante_review NUMBER,
+    instante_review TIMESTAMP,
 
     CONSTRAINT Curtiu_Review_pkey PRIMARY KEY(id_usuario_curtidor, id_usuario_autor, id_obra, instante_review),
     CONSTRAINT Curtiu_Review_fkey_curtidor FOREIGN KEY(id_usuario_curtidor)

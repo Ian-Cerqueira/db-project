@@ -189,11 +189,12 @@ INSERT INTO Estudio (nome, id_obra) VALUES
 ('Les Grands Films Classiques', 19),
 ('Bitter Films', 20);
 
-INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoilers) VALUES
-(1, 7, NULL, 'revolucionário', 5, 0),
-(14, 1, NULL, '5 estrelas pelos memes', 5, 0),
-(7, 2, NULL, 'peak', 4, 0),
-(8, 6, NULL, 'Me fizeram uma proposta que não pude recusar', NULL, 0);
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES
+(1, 7, TO_TIMESTAMP('2023-07-23 04:05:49','YYYY-MM-DD HH24:MI:SS'), 'revolucionário', 5, '0'),
+(14, 1, TO_TIMESTAMP('2024-08-01 10:00:00','YYYY-MM-DD HH24:MI:SS'), '5 estrelas pelos memes', 5, '0'),
+(7, 2, TO_TIMESTAMP('2023-06-10 12:00:00','YYYY-MM-DD HH24:MI:SS'), 'peak', 4, '0'),
+(8, 6, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Me fizeram uma proposta que não pude recusar', 3, '0');
+
 
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES
 (1, 16, 'Diretor'),
@@ -297,6 +298,11 @@ INSERT INTO Curtiu_Lista(id_usuario, id_obra) VALUES
 (14, 5), (14, 6), (14, 19), (15, 3), 
 (15, 4), (16, 4), (17, 2), (17, 5), 
 (19, 1), (19, 3), (20, 4), (20, 5);
+
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES
+(3, 7, 1, TO_TIMESTAMP('2023-07-23 04:05:49','YYYY-MM-DD HH24:MI:SS')),
+(5, 1, 14, TO_TIMESTAMP('2024-08-01 10:00:00','YYYY-MM-DD HH24:MI:SS')),
+(8, 2, 7, TO_TIMESTAMP('2023-06-10 12:00:00','YYYY-MM-DD HH24:MI:SS'));
 
 INSERT INTO Participou (id_obra, id_artista) VALUES
 (1, 16), (12, 1), (3, 13), (3, 15), (7, 18),
