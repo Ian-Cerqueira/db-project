@@ -211,9 +211,9 @@ CREATE TABLE Segue (
 
     CONSTRAINT Segue_ck_NoSelfFollow CHECK(id_seguidor <> id_seguido),
     CONSTRAINT Segue_pkey PRIMARY KEY(id_seguidor, id_seguido),
-    CONSTRAINT Segue_fkey FOREIGN KEY(id_seguidor)
+    CONSTRAINT Segue_fkey_seguidor FOREIGN KEY(id_seguidor)
         REFERENCES Usuario(id),
-    CONSTRAINT Segue_fkey FOREIGN KEY(id_seguido)
+    CONSTRAINT Segue_fkey_seguido FOREIGN KEY(id_seguido)
         REFERENCES Usuario(id)
 
 );
