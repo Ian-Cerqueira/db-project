@@ -69,7 +69,7 @@ CREATE TABLE Genero (
 
 CREATE TABLE Posters (
     id_obra NUMBER,
-    poster BLOB,
+    poster VARCHAR2(500),
 
     CONSTRAINT Posters_pkey PRIMARY KEY(id_obra, poster),
     CONSTRAINT Posters_fkey FOREIGN KEY(id_obra)
@@ -102,7 +102,7 @@ CREATE TABLE Usuario (
     nome VARCHAR2(200) NOT NULL,
     login VARCHAR2(25) NOT NULL,
     senha VARCHAR2(50) NOT NULL,
-    iconeDePerfil BLOB NOT NULL,
+    iconeDePerfil VARCHAR2(1000) NOT NULL,
     bio VARCHAR2(300) NOT NULL, /* SEM BIO = STRING VAZIA */
     pronome VARCHAR2(20),
     pais VARCHAR2(50),
@@ -115,7 +115,7 @@ CREATE TABLE Usuario (
 CREATE TABLE Artistas (
     id NUMBER,
     nome VARCHAR2(100) NOT NULL,
-    bio CLOB NOT NULL,
+    bio VARCHAR2(500) NOT NULL,
     data_nascimento DATE NOT NULL,
 
     CONSTRAINT Artista_pkey PRIMARY KEY(id)
