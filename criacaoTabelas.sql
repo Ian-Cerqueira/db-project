@@ -286,7 +286,7 @@ CREATE TABLE Curtiu_Review (
     CONSTRAINT Curtiu_Review_fkey_Obra FOREIGN KEY(id_obra)
         REFERENCES Obra(id),
     CONSTRAINT Curtiu_Review_fkey_instantereview FOREIGN KEY(instante_review)
-        REFERENCES Review(instante_avalicao)
+        REFERENCES Review(instante_avaliacao)
 
 );
 
