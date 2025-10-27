@@ -67,9 +67,9 @@ INSERT INTO Genero (ID_Obra, Genero) VALUES
 (15, 'Animação'), (15, 'Aventura'), (15, 'Fantasia'),
 (16, 'Drama'), (16, 'Mistério'), (16, 'Aventura'),
 (17, 'Animação'), (17, 'Fantasia'), (17, 'Drama'),
-(18, 'Documentário'), (18, 'Curta'),
-(19, 'Curta'), (19, 'Surrealismo'),
-(20, 'Animação'), (20, 'Ficção Científica'), (20, 'Curta');
+(18, 'Documentário'),
+(19, 'Surrealismo'),
+(20, 'Animação'), (20, 'Ficção Científica');
 
 INSERT INTO Usuario (Login, Senha, Nome, Bio, Pronome, Localizacao, Icone_de_perfil) VALUES
 ('afol', 'senha123', 'Arthur Fernandes', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
@@ -92,3 +92,27 @@ INSERT INTO Usuario (Login, Senha, Nome, Bio, Pronome, Localizacao, Icone_de_per
 ('cinemania', 'senha123', 'CineMania', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
 ('omeleteve', 'senha123', 'Omelete', '', 'Ela/Dela', 'Brasil', 'https://i.imgur.com/HQJKYW1.png'),
 ('cinemarque', 'senha123', 'cinemarque', '', 'Ele/Dele', 'Brasil', 'https://i.imgur.com/HQJKYW1.png');
+
+INSERT INTO Estudio (ID_Obra, Nome_do_estudio) VALUES
+(1, 'Metro-Goldwyn-Mayer'),
+(1, 'Stanley Kubrick Productions'),
+(2, 'Neon'),
+(3, 'Paramount Pictures'),
+(4, 'Studio Ghibli'),
+(5, '40 Acres & A Mule Filmworks'),
+(5, 'Universal Pictures'),
+(6, 'A24'),
+(7, 'Universal Pictures'),
+(8, 'Paramount Pictures'),
+(9, 'Universal Pictures'),
+(10, 'Barunson E&A'),
+(11, 'Miramax'),
+(12, 'Daiei Film'),
+(13, 'StudioCanal'),
+(14, 'Sony Pictures Television'),
+(15, 'Cartoon Network Studios'),
+(16, 'ABC Studios'),
+(17, 'Shaft'),
+(18, 'Casa de Cinema de Porto Alegre'),
+(19, 'Les Grands Films Classiques'),
+(20, 'Bitter Films');
