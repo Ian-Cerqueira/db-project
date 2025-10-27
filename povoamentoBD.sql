@@ -148,7 +148,7 @@ INSERT INTO Usuario (id, nome, login, senha, iconeDePerfil, bio, pronome, pais, 
 (2, 'Arlindo', 'arlindo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
 (3, 'Arthur Torres', 'atl', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
 (4, 'Rio', 'grtc', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
-(5, 'Ian', 'idhec', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
+(5, 'Ian', 'idhac', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
 (6, 'Ítalo', 'icbo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
 (7, 'Jesper Ian', 'jisbra', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
 (8, 'João Teles', 'joaoteles', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife'),
@@ -314,7 +314,7 @@ VALUES (8, 9, 15, SYSTIMESTAMP);
 
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES
 (3, 7),  -- atl segue jisbra
-(5, 7),  -- idhec segue jisbra
+(5, 7),  -- idhac segue jisbra
 (2, 1),  -- arlindo segue afol
 (4, 2),  -- grtc segue arlindo
 (8, 4),  -- joaoteles segue grtc
