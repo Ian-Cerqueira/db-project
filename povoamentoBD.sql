@@ -1,18 +1,59 @@
+-- LIMPEZA
+REMOVE FROM Obra;
+REMOVE FROM Estudio;
+REMOVE FROM Idiomas;
+REMOVE FROM Genero;
+REMOVE FROM Posters;
+REMOVE FROM Tags;
+REMOVE FROM Nacionalidades;
+REMOVE FROM Usuario;
+REMOVE FROM Artistas;
+REMOVE FROM Lista;
+REMOVE FROM Watchlist;
+REMOVE FROM Lista_Personalizada;
+REMOVE FROM Review;
+REMOVE FROM Entrada_do_Log;
+REMOVE FROM Participou;
+REMOVE FROM Funcoes;
+REMOVE FROM Segue;
+REMOVE FROM Assistiu;
+REMOVE FROM Adicionou_Lista_Personalizada;
+REMOVE FROM Adicionou_Watchlist;
+REMOVE FROM Curtiu_Obra;
+REMOVE FROM Curtiu_Lista_Personalizada;
+REMOVE FROM Curtiu_Watchlist;
+REMOVE FROM Curtiu_Review;
+REMOVE FROM Log_Compartilhado;
+
 -- LONGA-METRAGEM
-INSERT INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
-('2001: Uma Odisseia no Espaço', 'Longa-Metragem', TO_DATE('1968-04-02', 'YYYY-MM-DD'), 'Equipe espacial descobre mistério durante viagem a Júpiter.', 'Reino Unido', 149),
-('Anora', 'Longa-Metragem', TO_DATE('2024-05-20', 'YYYY-MM-DD'), 'Stripper russa no Brooklyn vive romance inesperado com herdeiro de oligarca.', 'EUA', 110),
-('Assassinos da Lua das Flores', 'Longa-Metragem', TO_DATE('2023-10-19', 'YYYY-MM-DD'), 'Crimes em tribo Osage na década de 1920.', 'EUA', 206),
-('A Viagem de Chihiro', 'Longa-Metragem', TO_DATE('2001-07-20', 'YYYY-MM-DD'), 'Menina entra em mundo mágico para salvar pais.', 'Japão', 125),
-('Faça a Coisa Certa', 'Longa-Metragem', TO_DATE('1989-06-30', 'YYYY-MM-DD'), 'Tensões raciais em dia quente no Brooklyn.', 'EUA', 120),
-('Moonlight: Sob a Luz do Luar', 'Longa-Metragem', TO_DATE('2016-10-21', 'YYYY-MM-DD'), 'Jovem enfrenta desafios em Miami.', 'EUA', 111),
-('O Gato das Botas: O Último Desejo', 'Longa-Metragem', TO_DATE('2022-12-21', 'YYYY-MM-DD'), 'Gato busca desejo para recuperar suas nove vidas.', 'EUA', 102),
-('O Poderoso Chefão', 'Longa-Metragem', TO_DATE('1972-03-24', 'YYYY-MM-DD'), 'Saga da família mafiosa Corleone.', 'EUA', 175),
-('Oppenheimer', 'Longa-Metragem', TO_DATE('2023-07-20', 'YYYY-MM-DD'), 'Criador da bomba atômica lida com dilemas.', 'EUA', 180),
-('Parasita', 'Longa-Metragem', TO_DATE('2019-05-30', 'YYYY-MM-DD'), 'Família se infiltra em casa de ricos.', 'Coreia do Sul', 132),
-('Pulp Fiction: Tempo de Violência', 'Longa-Metragem', TO_DATE('1994-09-10', 'YYYY-MM-DD'), 'Histórias interligadas do submundo de LA.', 'EUA', 154),
-('Rashomon', 'Longa-Metragem', TO_DATE('1950-08-25', 'YYYY-MM-DD'), 'Crime contado sob diferentes perspectivas.', 'Japão', 88),
+INSERT ALL
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('2001: Uma Odisseia no Espaço', 'Longa-Metragem', TO_DATE('1968-04-02', 'YYYY-MM-DD'), 'Equipe espacial descobre mistério durante viagem a Júpiter.', 'Reino Unido', 149);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('Anora', 'Longa-Metragem', TO_DATE('2024-05-20', 'YYYY-MM-DD'), 'Stripper russa no Brooklyn vive romance inesperado com herdeiro de oligarca.', 'EUA', 110);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('Assassinos da Lua das Flores', 'Longa-Metragem', TO_DATE('2023-10-19', 'YYYY-MM-DD'), 'Crimes em tribo Osage na década de 1920.', 'EUA', 206);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('A Viagem de Chihiro', 'Longa-Metragem', TO_DATE('2001-07-20', 'YYYY-MM-DD'), 'Menina entra em mundo mágico para salvar pais.', 'Japão', 125);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('Faça a Coisa Certa', 'Longa-Metragem', TO_DATE('1989-06-30', 'YYYY-MM-DD'), 'Tensões raciais em dia quente no Brooklyn.', 'EUA', 120);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('Moonlight: Sob a Luz do Luar', 'Longa-Metragem', TO_DATE('2016-10-21', 'YYYY-MM-DD'), 'Jovem enfrenta desafios em Miami.', 'EUA', 111);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('O Gato das Botas: O Último Desejo', 'Longa-Metragem', TO_DATE('2022-12-21', 'YYYY-MM-DD'), 'Gato busca desejo para recuperar suas nove vidas.', 'EUA', 102);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('O Poderoso Chefão', 'Longa-Metragem', TO_DATE('1972-03-24', 'YYYY-MM-DD'), 'Saga da família mafiosa Corleone.', 'EUA', 175);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('Oppenheimer', 'Longa-Metragem', TO_DATE('2023-07-20', 'YYYY-MM-DD'), 'Criador da bomba atômica lida com dilemas.', 'EUA', 180);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('Parasita', 'Longa-Metragem', TO_DATE('2019-05-30', 'YYYY-MM-DD'), 'Família se infiltra em casa de ricos.', 'Coreia do Sul', 132);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('Pulp Fiction: Tempo de Violência', 'Longa-Metragem', TO_DATE('1994-09-10', 'YYYY-MM-DD'), 'Histórias interligadas do submundo de LA.', 'EUA', 154);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
+('Rashomon', 'Longa-Metragem', TO_DATE('1950-08-25', 'YYYY-MM-DD'), 'Crime contado sob diferentes perspectivas.', 'Japão', 88);
+INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
 ('Senna: O Brasileiro, O Herói, O Campeão', 'Longa-Metragem', TO_DATE('2010-10-07', 'YYYY-MM-DD'), 'Documentário sobre Ayrton Senna.', 'Reino Unido', 106);
+SELECT * FROM DUAL;
 
 -- SERIADO
 INSERT INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES
@@ -204,25 +245,22 @@ INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES
 (7, 18, 'Ator');
 
 -- Listas Personalizadas
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, 'Minhas obras japonesas favoritas', '0', 'Obras Japonesas');
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, 'Absolut Cinema', '1', 'CINEMA');
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, NULL, '0', 'Animacao');
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, 'Quem nao viu veja!', '1', 'Mistureba');
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, NULL, '1', 'Oscars');
+INSERT INTO Lista_Personalizada (descricao, visibilidade, titulo) VALUES
+('Minhas obras japonesas favoritas', '0', 'Obras Japonesas'),
+('Absolut Cinema', '1', 'CINEMA'),
+('Quem nao viu veja!', '1', 'Mistureba');
+INSERT INTO Lista_Personalizada (visibilidade, titulo) VALUES
+('1', 'Oscars'),
+('0', 'Animacao');
 
 INSERT INTO Watchlist (id_lista) VALUES
-(lista_seq.CURRVAL);
+(lista_watch_seq.CURRVAL);
 INSERT INTO Watchlist (id_lista) VALUES
-(lista_seq.CURRVAL);
+(lista_watch_seq.CURRVAL);
 INSERT INTO Watchlist (id_lista) VALUES
-(lista_seq.CURRVAL);
+(lista_watch_seq.CURRVAL);
 
-INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) VALUES 
+INSERT INTO Adicionou_Lista_Personalizada (id_lista, id_obra, id_usuario, data_adicao) VALUES 
 --Lista Privada 1
 (1, 4, 7, SYSTIMESTAMP),
 (1, 12, 7, SYSTIMESTAMP),
@@ -248,7 +286,9 @@ INSERT INTO Adicionou (id_lista, id_obra, id_usuario, data_adicao) VALUES
 (5, 6, 19, SYSTIMESTAMP),
 (5, 8, 19, SYSTIMESTAMP),
 (5, 9, 19, SYSTIMESTAMP),
-(5, 10, 19, SYSTIMESTAMP),
+(5, 10, 19, SYSTIMESTAMP);
+
+INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES
 --Watchlist 1
 (6, 20, 2, SYSTIMESTAMP),
 --Watchlist 2
