@@ -311,17 +311,17 @@ INSERT INTO Adicionou_Lista_Personalizada (id_lista, id_obra, id_usuario, data_a
 
 
 -- Watchlist 1
-INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (6, 20, 2, SYSTIMESTAMP);
+INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (1, 20, 2, SYSTIMESTAMP);
 
 -- Watchlist 2
-INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (7, 1, 11, SYSTIMESTAMP);
-INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (7, 8, 11, SYSTIMESTAMP);
-INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (7, 9, 11, SYSTIMESTAMP);
+INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (2, 1, 11, SYSTIMESTAMP);
+INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (2, 8, 11, SYSTIMESTAMP);
+INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (2, 9, 11, SYSTIMESTAMP);
 
 -- Watchlist 3
-INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (8, 1, 15, SYSTIMESTAMP);
-INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (8, 8, 15, SYSTIMESTAMP);
-INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (8, 9, 15, SYSTIMESTAMP);
+INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (3, 1, 15, SYSTIMESTAMP);
+INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (3, 8, 15, SYSTIMESTAMP);
+INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALUES (3, 9, 15, SYSTIMESTAMP);
 
 
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (3, 7);  -- atl segue jisbra
