@@ -1,6 +1,7 @@
 DROP SEQUENCE obra_seq;
 DROP SEQUENCE artista_seq;
-DROP SEQUENCE lista_seq;
+DROP SEQUENCE lista_watch_seq;
+DROP SEQUENCE lista_per_seq;
 DROP SEQUENCE usuario_seq;
 
 CREATE SEQUENCE obra_seq
