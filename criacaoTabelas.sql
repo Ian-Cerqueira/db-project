@@ -231,18 +231,34 @@ CREATE TABLE Segue (
 
 -- ); 
 
-CREATE TABLE Adicionou (
+CREATE TABLE Adicionou_Watchlist (
     id_lista NUMBER,
     id_obra NUMBER,
     id_usuario NUMBER,
     data_adicao TIMESTAMP NOT NULL,
 
-    CONSTRAINT Adicionou_pkey PRIMARY KEY(id_lista, id_obra, id_usuario),
-    CONSTRAINT Adicionou_fkey_Lista FOREIGN KEY(id_lista)
-        REFERENCES Lista(id),
-    CONSTRAINT Adicionou_fkey_Obra FOREIGN KEY(id_obra)
+    CONSTRAINT Adicionou_pkey_watchlist PRIMARY KEY(id_lista, id_obra, id_usuario),
+    CONSTRAINT Adicionou_fkey_watchlist FOREIGN KEY(id_lista)
+        REFERENCES Watchlist(id),
+    CONSTRAINT Adicionou_fkey_watchlist_Obra FOREIGN KEY(id_obra)
         REFERENCES Obra(id),
-    CONSTRAINT Adicionou_fkey_Usuario FOREIGN KEY(id_usuario)
+    CONSTRAINT Adicionou_fkey_watchlist_Usuario FOREIGN KEY(id_usuario)
+        REFERENCES Usuario(id)
+    
+);
+
+CREATE TABLE Adicionou_lista_personalizada (
+    id_lista NUMBER,
+    id_obra NUMBER,
+    id_usuario NUMBER,
+    data_adicao TIMESTAMP NOT NULL,
+
+    CONSTRAINT Adicionou_pkey_lista_personalizada PRIMARY KEY(id_lista, id_obra, id_usuario),
+    CONSTRAINT Adicionou_fkey_Lista_personalizada FOREIGN KEY(id_lista)
+        REFERENCES Lista_Personalizada(id),
+    CONSTRAINT Adicionou_fkey_lista_personalizada_Obra FOREIGN KEY(id_obra)
+        REFERENCES Obra(id),
+    CONSTRAINT Adicionou_fkey_lista_personalizada_Usuario FOREIGN KEY(id_usuario)
         REFERENCES Usuario(id)
     
 );
@@ -259,15 +275,26 @@ CREATE TABLE Curtiu_Obra (
 
 );
 
-CREATE TABLE Curtiu_Lista (
+CREATE TABLE Curtiu_Watchlist (
     id_usuario NUMBER,
     id_lista NUMBER,
 
-    CONSTRAINT Curtiu_Lista_pkey PRIMARY KEY(id_usuario, id_lista),
-    CONSTRAINT Curtiu_Lista_fkey_Usuario FOREIGN KEY(id_usuario)
+    CONSTRAINT Curtiu_Watchlist_pkey PRIMARY KEY(id_usuario, id_lista),
+    CONSTRAINT Curtiu_Watchlist_fkey_Usuario FOREIGN KEY(id_usuario)
         REFERENCES Usuario(id),
-    CONSTRAINT Curtiu_Lista_fkey_Lista FOREIGN KEY(id_lista)
-        REFERENCES Lista(id)
+    CONSTRAINT Curtiu_Watchlist_fkey_Lista FOREIGN KEY(id_lista)
+        REFERENCES Watchlist(id)
+);
+
+CREATE TABLE Curtiu_Lista_personalizada (
+    id_usuario NUMBER,
+    id_lista NUMBER,
+
+    CONSTRAINT Curtiu_Lista_personalizada_pkey PRIMARY KEY(id_usuario, id_lista),
+    CONSTRAINT Curtiu_Lista_personalizada_fkey_Usuario FOREIGN KEY(id_usuario)
+        REFERENCES Usuario(id),
+    CONSTRAINT Curtiu_Lista_personalizada_fkey_Lista FOREIGN KEY(id_lista)
+        REFERENCES Lista_Personalizada(id)
 );
 
 CREATE TABLE Curtiu_Review (
