@@ -1,4 +1,4 @@
-code pov/* Talvez adicionar mais checks e definir a situação do assistiu/log-compartilhado */
+/* Talvez adicionar mais checks e definir a situação do assistiu/log-compartilhado */
 
 DROP TABLE Obra CASCADE CONSTRAINTS;
 DROP TABLE Estudio CASCADE CONSTRAINTS;
