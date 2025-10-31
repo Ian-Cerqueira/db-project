@@ -1,4 +1,4 @@
-/* Talvez adicionar mais checks e definir a situação do assistiu/log-compartilhado */
+code pov/* Talvez adicionar mais checks e definir a situação do assistiu/log-compartilhado */
 
 DROP TABLE Obra CASCADE CONSTRAINTS;
 DROP TABLE Estudio CASCADE CONSTRAINTS;
@@ -129,22 +129,18 @@ CREATE TABLE Nacionalidades (
 -- );
 
 CREATE TABLE Watchlist (
-    id_lista NUMBER,
+    id NUMBER,
 
-    CONSTRAINT Watchlist_pkey PRIMARY KEY(id_lista),
-    CONSTRAINT Watchlist_fkey FOREIGN KEY(id_lista)
-        REFERENCES Lista(id)
+    CONSTRAINT Watchlist_pkey PRIMARY KEY(id)
 );
 
 CREATE TABLE Lista_Personalizada (
-    id_lista NUMBER, 
+    id NUMBER, 
     descricao VARCHAR2(500) DEFAULT 'Sem descrição.',
     visibilidade CHAR(1) DEFAULT '1', /* 1 -> público, 0 -> não público */
     titulo VARCHAR2(200) NOT NULL,
 
-    CONSTRAINT Lista_Personalizada_pkey PRIMARY KEY(id_lista),
-    CONSTRAINT Lista_Personalizada_fkey FOREIGN KEY(id_lista)
-        REFERENCES Lista(id),
+    CONSTRAINT Lista_Personalizada_pkey PRIMARY KEY(id),
     CONSTRAINT Lista_Personalizada_ck_visibilidade CHECK(visibilidade IN ('1', '0'))
 
 );

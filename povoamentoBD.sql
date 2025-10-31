@@ -204,16 +204,16 @@ INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES
 (7, 18, 'Ator');
 
 -- Listas Personalizadas
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, 'Minhas obras japonesas favoritas', '0', 'Obras Japonesas');
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, 'Absolut Cinema', '1', 'CINEMA');
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, NULL, '0', 'Animacao');
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, 'Quem nao viu veja!', '1', 'Mistureba');
-INSERT INTO Lista_Personalizada (id_lista, descricao, visibilidade, titulo) VALUES
-(lista_seq.CURRVAL, NULL, '1', 'Oscars');
+INSERT INTO Lista_Personalizada (descricao, visibilidade, titulo) VALUES
+('Minhas obras japonesas favoritas', '0', 'Obras Japonesas');
+INSERT INTO Lista_Personalizada (descricao, visibilidade, titulo) VALUES
+('Absolut Cinema', '1', 'CINEMA');
+INSERT INTO Lista_Personalizada (visibilidade, titulo) VALUES
+('0', 'Animacao');
+INSERT INTO Lista_Personalizada (descricao, visibilidade, titulo) VALUES
+('Quem nao viu veja!', '1', 'Mistureba');
+INSERT INTO Lista_Personalizada (visibilidade, titulo) VALUES
+('1', 'Oscars');
 
 INSERT INTO Watchlist (id_lista) VALUES
 (lista_seq.CURRVAL);

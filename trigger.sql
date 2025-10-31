@@ -18,11 +18,21 @@ BEGIN
 END;
 /
 
-CREATE OR REPLACE TRIGGER trg_lista_id
-BEFORE INSERT ON Lista
+CREATE OR REPLACE TRIGGER trg_lista_per_id
+BEFORE INSERT ON Lista_Personalizada
 FOR EACH ROW
 BEGIN
-    SELECT lista_seq.NEXTVAL 
+    SELECT lista_per_seq.NEXTVAL 
+    INTO :NEW.id 
+    FROM DUAL;
+END;
+/
+
+CREATE OR REPLACE TRIGGER trg_lista_watch_id
+BEFORE INSERT ON Watchlist
+FOR EACH ROW
+BEGIN
+    SELECT lista_watch_seq.NEXTVAL 
     INTO :NEW.id 
     FROM DUAL;
 END;
