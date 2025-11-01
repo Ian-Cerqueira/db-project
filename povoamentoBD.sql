@@ -334,16 +334,16 @@ INSERT INTO Segue (id_seguidor, id_seguido) VALUES (10, 9); -- marcosgabriel seg
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (15, 11); -- pipocando segue tam6
 
 
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (2, 12, '2022-04-12 14:29:58', '1');
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (17, 2, '2024-12-02 14:02:23', '0');
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (4, 9, '2003-08-26 14:23:02', '1');
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (4, 9, '2003-08-26 16:28:07', '1');
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (4, 9, '2003-08-26 18:33:16', '1');
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (3, 7, '2023-07-23 04:05:49', '0');
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (17, 16, '2022-01-29 15:01:53', '1');
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (9, 13, '2024-06-06 14:22:14', '0');
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (9, 10, '2020-05-30 02:52:39', '1');
-INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (4, 10, '2023-05-27 12:50:34', '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (2, 12, TO_TIMESTAMP('2022-04-12 14:29:58', 'YYYY-MM-DD HH24:MI:SS'), '1');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (17, 2, TO_TIMESTAMP('2024-12-02 14:02:23', 'YYYY-MM-DD HH24:MI:SS'), '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (4, 9, TO_TIMESTAMP('2003-08-26 14:23:02', 'YYYY-MM-DD HH24:MI:SS'), '1');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (4, 9, TO_TIMESTAMP('2003-08-26 16:28:07', 'YYYY-MM-DD HH24:MI:SS'), '1');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (4, 9, TO_TIMESTAMP('2003-08-26 18:33:16', 'YYYY-MM-DD HH24:MI:SS'), '1');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (3, 7, TO_TIMESTAMP('2023-07-23 04:05:49', 'YYYY-MM-DD HH24:MI:SS'), '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (17, 16, TO_TIMESTAMP('2022-01-29 15:01:53', 'YYYY-MM-DD HH24:MI:SS'), '1');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (9, 13, TO_TIMESTAMP('2024-06-06 14:22:14', 'YYYY-MM-DD HH24:MI:SS'), '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (9, 10, TO_TIMESTAMP('2020-05-30 02:52:39', 'YYYY-MM-DD HH24:MI:SS'), '1');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (4, 10, TO_TIMESTAMP('2023-05-27 12:50:34', 'YYYY-MM-DD HH24:MI:SS'), '0');
 
 
 INSERT INTO Curtiu_Obra(id_usuario, id_obra) VALUES (1, 14);
@@ -497,10 +497,10 @@ INSERT INTO Participou (id_obra, id_artista) VALUES (3, 10);
 INSERT INTO Participou (id_obra, id_artista) VALUES (4, 9);
 
 
-INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (2, 12, 10, '2022-04-12 14:29:58');
-INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (4, 9, 1, '2003-08-26 16:28:07');
-INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (4, 9, 9, '2003-08-26 18:33:16');
-INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (3, 7, 18, '2023-07-23 04:05:49');
-INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (9, 13, 10, '2024-06-06 14:22:14');
-INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (9, 10, 7, '2020-05-30 02:52:39');
-INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (4, 10, 4, '2023-05-27 12:50:34');
+INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (2, 12, 10, TO_TIMESTAMP('2022-04-12 14:29:58', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (4, 9, 1, TO_TIMESTAMP('2003-08-26 16:28:07', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (4, 9, 9, TO_TIMESTAMP('2003-08-26 18:33:16', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (3, 7, 18, TO_TIMESTAMP('2023-07-23 04:05:49', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (9, 13, 10, TO_TIMESTAMP('2024-06-06 14:22:14', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (9, 10, 7, TO_TIMESTAMP('2020-05-30 02:52:39', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Log_Compartilhado (id_obra, id_usuario_log, id_usuario_compartilhador, instante_log) VALUES (4, 10, 4, TO_TIMESTAMP('2023-05-27 12:50:34', 'YYYY-MM-DD HH24:MI:SS'));
