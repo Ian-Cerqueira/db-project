@@ -5,11 +5,9 @@ DROP TABLE Estudio CASCADE CONSTRAINTS;
 DROP TABLE Idiomas CASCADE CONSTRAINTS;
 DROP TABLE Genero CASCADE CONSTRAINTS;
 DROP TABLE Posters CASCADE CONSTRAINTS;
-DROP TABLE Tags CASCADE CONSTRAINTS;
 DROP TABLE Nacionalidades CASCADE CONSTRAINTS;
 DROP TABLE Usuario CASCADE CONSTRAINTS;
 DROP TABLE Artistas CASCADE CONSTRAINTS;
-DROP TABLE Lista CASCADE CONSTRAINTS;
 DROP TABLE Watchlist CASCADE CONSTRAINTS;
 DROP TABLE Lista_Personalizada CASCADE CONSTRAINTS;
 DROP TABLE Review CASCADE CONSTRAINTS;
@@ -17,7 +15,6 @@ DROP TABLE Entrada_do_Log CASCADE CONSTRAINTS;
 DROP TABLE Participou CASCADE CONSTRAINTS;
 DROP TABLE Funcoes CASCADE CONSTRAINTS;
 DROP TABLE Segue CASCADE CONSTRAINTS;
-DROP TABLE Assistiu CASCADE CONSTRAINTS;
 DROP TABLE Adicionou_Lista_Personalizada CASCADE CONSTRAINTS;
 DROP TABLE Adicionou_Watchlist CASCADE CONSTRAINTS;
 DROP TABLE Curtiu_Obra CASCADE CONSTRAINTS;
@@ -79,16 +76,6 @@ CREATE TABLE Posters (
 
 );
 
--- CREATE TABLE Tags (
---     id_obra NUMBER,
---     tag VARCHAR2(50),
-
---     CONSTRAINT Tags_pkey PRIMARY KEY(id_obra, tag),
---     CONSTRAINT Tags_fkey FOREIGN KEY(id_obra)
---         REFERENCES Obra(id)
-
--- );
-
 CREATE TABLE Usuario (
     id NUMBER,
     nome VARCHAR2(200) NOT NULL,
@@ -123,12 +110,6 @@ CREATE TABLE Nacionalidades (
         REFERENCES Artistas(id)
 
 );
-
--- CREATE TABLE Lista (
---     id NUMBER,
-
---     CONSTRAINT Lista_pkey PRIMARY KEY(id)
--- );
 
 CREATE TABLE Watchlist (
     id NUMBER,
@@ -217,21 +198,6 @@ CREATE TABLE Segue (
         REFERENCES Usuario(id)
 
 );
-
--- CREATE TABLE Assistiu (
---     id_obra NUMBER,
---     id_usuario NUMBER,
---     data_assistida DATE NOT NULL,
---     reassistindo CHAR(1) DEFAULT '0', /* 1 -> reassistindo, 0 -> não reassistindo */
-
---     CONSTRAINT Assistiu_pkey PRIMARY KEY(id_obra, id_usuario),
---     CONSTRAINT Assistiu_fkey_Obra FOREIGN KEY(id_obra)
---         REFERENCES Obra(id),
---     CONSTRAINT Assistiu_fkey_Usuario FOREIGN KEY(id_usuario)
---         REFERENCES Usuario(id),
---     CONSTRAINT Assistiu_ck_reassistindo CHECK(reassistindo IN ('1', '0'))
-
--- ); 
 
 CREATE TABLE Adicionou_Watchlist (
     id_lista NUMBER,
