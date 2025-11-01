@@ -273,9 +273,9 @@ INSERT INTO Lista_Personalizada (visibilidade, titulo) VALUES ('1', 'Oscars');
 INSERT INTO Lista_Personalizada (visibilidade, titulo) VALUES ('0', 'Animacao');
 
 -- Watchlists
-INSERT INTO Watchlist (id) VALUES (lista_watch_seq.CURRVAL);
-INSERT INTO Watchlist (id) VALUES (lista_watch_seq.CURRVAL);
-INSERT INTO Watchlist (id) VALUES (lista_watch_seq.CURRVAL);
+INSERT INTO Watchlist VALUES (NULL);
+INSERT INTO Watchlist VALUES (NULL);
+INSERT INTO Watchlist VALUES (NULL);
 
 
 -- Lista Privada 1
