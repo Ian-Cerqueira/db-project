@@ -1,29 +1,29 @@
 -- LIMPEZA
-REMOVE FROM Obra;
-REMOVE FROM Estudio;
-REMOVE FROM Idiomas;
-REMOVE FROM Genero;
-REMOVE FROM Posters;
-REMOVE FROM Tags;
-REMOVE FROM Nacionalidades;
-REMOVE FROM Usuario;
-REMOVE FROM Artistas;
-REMOVE FROM Lista;
-REMOVE FROM Watchlist;
-REMOVE FROM Lista_Personalizada;
-REMOVE FROM Review;
-REMOVE FROM Entrada_do_Log;
-REMOVE FROM Participou;
-REMOVE FROM Funcoes;
-REMOVE FROM Segue;
-REMOVE FROM Assistiu;
-REMOVE FROM Adicionou_Lista_Personalizada;
-REMOVE FROM Adicionou_Watchlist;
-REMOVE FROM Curtiu_Obra;
-REMOVE FROM Curtiu_Lista_Personalizada;
-REMOVE FROM Curtiu_Watchlist;
-REMOVE FROM Curtiu_Review;
-REMOVE FROM Log_Compartilhado;
+DELETE FROM Obra;
+DELETE FROM Estudio;
+DELETE FROM Idiomas;
+DELETE FROM Genero;
+DELETE FROM Posters;
+DELETE FROM Tags;
+DELETE FROM Nacionalidades;
+DELETE FROM Usuario;
+DELETE FROM Artistas;
+DELETE FROM Lista;
+DELETE FROM Watchlist;
+DELETE FROM Lista_Personalizada;
+DELETE FROM Review;
+DELETE FROM Entrada_do_Log;
+DELETE FROM Participou;
+DELETE FROM Funcoes;
+DELETE FROM Segue;
+DELETE FROM Assistiu;
+DELETE FROM Adicionou_Lista_Personalizada;
+DELETE FROM Adicionou_Watchlist;
+DELETE FROM Curtiu_Obra;
+DELETE FROM Curtiu_Lista_Personalizada;
+DELETE FROM Curtiu_Watchlist;
+DELETE FROM Curtiu_Review;
+DELETE FROM Log_Compartilhado;
 
 -- LONGA-METRAGEM
 INSERT INTO Obra (nome, tipo, dataLancamento, sinopse, paisDeOrigem, duracao) VALUES ('2001: Uma Odisseia no Espaço', 'Longa-Metragem', TO_DATE('1968-04-02', 'YYYY-MM-DD'), 'Equipe espacial descobre mistério durante viagem a Júpiter.', 'Reino Unido', 149);
@@ -273,9 +273,9 @@ INSERT INTO Lista_Personalizada (visibilidade, titulo) VALUES ('1', 'Oscars');
 INSERT INTO Lista_Personalizada (visibilidade, titulo) VALUES ('0', 'Animacao');
 
 -- Watchlists
-INSERT INTO Watchlist (id_lista) VALUES (lista_watch_seq.CURRVAL);
-INSERT INTO Watchlist (id_lista) VALUES (lista_watch_seq.CURRVAL);
-INSERT INTO Watchlist (id_lista) VALUES (lista_watch_seq.CURRVAL);
+INSERT INTO Watchlist (id) VALUES (lista_watch_seq.CURRVAL);
+INSERT INTO Watchlist (id) VALUES (lista_watch_seq.CURRVAL);
+INSERT INTO Watchlist (id) VALUES (lista_watch_seq.CURRVAL);
 
 
 -- Lista Privada 1
