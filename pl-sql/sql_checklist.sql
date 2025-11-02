@@ -15,4 +15,4 @@ WHERE id = 3;
 
 UPDATE Lista_Personalizada
 SET visibilidade = '1'
-WHERE id = 1;
+WHERE id = 1; 
