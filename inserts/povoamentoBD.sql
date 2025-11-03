@@ -549,7 +549,16 @@ INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VAL
 INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (9, 13, TO_TIMESTAMP('2024-06-06 14:22:14', 'YYYY-MM-DD HH24:MI:SS'), '0');
 INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (9, 10, TO_TIMESTAMP('2020-05-30 02:52:39', 'YYYY-MM-DD HH24:MI:SS'), '1');
 INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (4, 10, TO_TIMESTAMP('2023-05-27 12:50:34', 'YYYY-MM-DD HH24:MI:SS'), '0');
-
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (1, 5, TO_TIMESTAMP('2021-11-14 19:45:12', 'YYYY-MM-DD HH24:MI:SS'), '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (6, 3, TO_TIMESTAMP('2020-01-02 09:12:41', 'YYYY-MM-DD HH24:MI:SS'), '1');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (11, 14, TO_TIMESTAMP('2018-07-30 22:17:33', 'YYYY-MM-DD HH24:MI:SS'), '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (15, 18, TO_TIMESTAMP('2024-02-10 13:55:00', 'YYYY-MM-DD HH24:MI:SS'), '1');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (8, 1, TO_TIMESTAMP('2019-09-09 21:14:28', 'YYYY-MM-DD HH24:MI:SS'), '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (20, 4, TO_TIMESTAMP('2023-12-25 00:11:05', 'YYYY-MM-DD HH24:MI:SS'), '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (10, 11, TO_TIMESTAMP('2021-03-03 18:32:50', 'YYYY-MM-DD HH24:MI:SS'), '1');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (13, 7, TO_TIMESTAMP('2020-08-18 10:08:44', 'YYYY-MM-DD HH24:MI:SS'), '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (18, 9, TO_TIMESTAMP('2022-06-01 07:59:20', 'YYYY-MM-DD HH24:MI:SS'), '0');
+INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (5, 16, TO_TIMESTAMP('2024-10-14 16:47:12', 'YYYY-MM-DD HH24:MI:SS'), '1');
 
 INSERT INTO Curtiu_Obra(id_usuario, id_obra) VALUES (1, 14);
 INSERT INTO Curtiu_Obra(id_usuario, id_obra) VALUES (3, 1);
