@@ -106,7 +106,7 @@ WHERE u.id IN (
 -- Exibe os nomes dos artistas e a quantidade de funcoes dos artistas que fizeram mais funcoes diferentes
 SELECT a.nome, COUNT(DISTINCT f.funcao) as Qtd_funcoes_diferentes
 FROM Funcoes as f
-INNER JOIN Artistas as a
+RIGHT JOIN Artistas as a
 ON f.id_artista = a.id
 GROUP BY a.nome
 ORDER BY COUNT(DISTINCT f.funcao) DESC;
@@ -166,3 +166,57 @@ SELECT login
 FROM Usuario
 WHERE bio IS NOT NULL;
 
+-- Exibe titulo da lista que não tem obras de aventura
+SELECT lp.titulo as Nome_da_lista
+FROM Lista_Personalizada as lp
+GROUP BY lp.id, lp.titulo
+HAVING lp.id != ALL (
+    SELECT alp.id_lista
+    FROM Adicionou_Lista_personalizada alp
+    INNER JOIN Genero g
+    ON alp.id_obra = g.id_obra
+    WHERE g.genero LIKE '%Aventura%'
+);
+
+
+
+-- obras com duração maior que qualquer curta metragem (ANY)
+SELECT Obra.nome, Obra.duracao
+FROM Obra
+WHERE Obra.duracao > ANY (
+    SELECT Obra.duracao
+    FROM Obra
+    WHERE Obra.tipo = 'Curta-Metragem'
+);
+
+
+-- artistas que participaram de pelo menos uma obra no reino unido (ANY)
+SELECT Artistas.nome
+FROM Artistas
+WHERE Artistas.id IN (
+    SELECT Participou.id_artista
+    FROM Participou
+    WHERE Participou.id_obra = ANY (
+        SELECT Obra.id
+        FROM Obra
+        WHERE Obra.paisDeOrigem = 'Reino Unido'
+    )
+);
+
+-- os usuários com mais seguidores que todos os usuários de recife (ALL)
+
+SELECT u1.id, u1.nome
+FROM Usuario u1
+WHERE u1.seguidores > ALL (
+    SELECT u2.seguidores
+    FROM Usuario u2
+    WHERE u2.cidade = 'Recife'
+);
+
+-- Exibe instantes que ocorreram as ações mais recentes na aplicação, seja review ou adição em lista, em ordem decrescente
+SELECT rw.instante_avaliacao
+FROM Review rw
+UNION
+SELECT Lp.data_adicao
+FROM Adicionou_Lista_personalizada Lp
+ORDER BY instante_avaliacao DESC;
