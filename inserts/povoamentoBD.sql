@@ -411,11 +411,11 @@ INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cida
 INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Victor', 'victor_ekko', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
 INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('UCI', 'uci', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
 INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('cherloque', 'cherloque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('BockRolandinho', 'pipocando', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('BockRolandinho', 'pipocando', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'São Paulo');
 INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('PeeWee', 'peewee', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Isabela Boscov', 'isabela_boscov', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Isabela Boscov', 'isabela_boscov', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'EUA', 'Nova York');
 INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('CineMania', 'cinemania', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Omelete', 'omeleteve', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Omelete', 'omeleteve', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'São Paulo');
 INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('cinemarque', 'cinemarque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
 
 
@@ -537,6 +537,16 @@ INSERT INTO Segue (id_seguidor, id_seguido) VALUES (8, 4);  -- joaoteles segue g
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (9, 4);  -- maf5 segue grtc
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (10, 9); -- marcosgabriel segue maf5
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (15, 11); -- pipocando segue tam6
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES (11, 15); -- tam6 segue pipocando
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES (7, 15);  -- jisbra segue pipocando
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES (9, 17);  -- maf5 segue isabela_boscov
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES (8, 17);  -- joaoteles segue isabela_boscov
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES (19, 17);  -- omeleteve segue isabela_boscov
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES (7, 17);  -- jisbra segue isabela_boscov
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES (2, 15);  -- arlindo segue pipocando
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES (13, 15);  -- cherloque segue pipocando
+
+
 
 
 INSERT INTO Entrada_do_log (id_obra, id_usuario, instante_log, reassistindo) VALUES (2, 12, TO_TIMESTAMP('2022-04-12 14:29:58', 'YYYY-MM-DD HH24:MI:SS'), '1');
