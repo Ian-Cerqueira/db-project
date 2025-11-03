@@ -161,3 +161,17 @@ WHERE u.id IN (
     );
 
 
+-- Exibe titulo da lista que não tem obras de aventura
+SELECT lp.titulo as Nome_da_lista
+FROM Lista_Personalizada as lp
+GROUP BY lp.id, lp.titulo
+HAVING lp.id != ALL (
+    SELECT alp.id_lista
+    FROM Adicionou_Lista_personalizada alp
+    INNER JOIN Genero g
+    ON alp.id_obra = g.id_obra
+    WHERE g.genero LIKE '%Aventura%'
+);
+
+
+
