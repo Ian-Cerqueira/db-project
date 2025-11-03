@@ -106,7 +106,7 @@ WHERE u.id IN (
 -- Exibe os nomes dos artistas e a quantidade de funcoes dos artistas que fizeram mais funcoes diferentes
 SELECT a.nome, COUNT(DISTINCT f.funcao) as Qtd_funcoes_diferentes
 FROM Funcoes as f
-INNER JOIN Artistas as a
+RIGHT JOIN Artistas as a
 ON f.id_artista = a.id
 GROUP BY a.nome
 ORDER BY COUNT(DISTINCT f.funcao) DESC;
