@@ -251,6 +251,12 @@ INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, pos
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (14, 1, TO_TIMESTAMP('2024-08-01 10:00:00','YYYY-MM-DD HH24:MI:SS'), '5 estrelas pelos memes', 5, '0');
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (7, 2, TO_TIMESTAMP('2023-06-10 12:00:00','YYYY-MM-DD HH24:MI:SS'), 'peak', 4, '0');
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (8, 6, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Me fizeram uma proposta que não pude recusar', 3, '0');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (13, 1, TO_TIMESTAMP('2022-02-20 09:15:00','YYYY-MM-DD HH24:MI:SS'), 'finalmente um documentário que nn deu sono', 4, '0');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (17, 7, TO_TIMESTAMP('2023-12-01 20:45:00','YYYY-MM-DD HH24:MI:SS'), 'MDS eu não esperava por esse final. Madoka dona do universo', 5, '1');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (17, 12, TO_TIMESTAMP('2024-01-15 14:20:00','YYYY-MM-DD HH24:MI:SS'), 'mano esse filme vai sair nunca kkkkkkkkk', 3, '0');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (19, 7, TO_TIMESTAMP('2022-05-30 18:10:00','YYYY-MM-DD HH24:MI:SS'), 'tive que assistir essa bomba pra faculdade', 2, '0');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (10, 2, TO_TIMESTAMP('2023-03-22 11:00:00','YYYY-MM-DD HH24:MI:SS'), 'pior que baldurs gate', 1, '0');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (2, 17, TO_TIMESTAMP('2024-04-18 16:25:00','YYYY-MM-DD HH24:MI:SS'), 'A Cinderela da contemporaniedade', 4, '0');
 
 
 
@@ -425,6 +431,15 @@ INSERT INTO Curtiu_Lista_Personalizada(id_usuario, id_lista) VALUES (20, 5);
 INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (3, 7, 1, TO_TIMESTAMP('2023-07-23 04:05:49','YYYY-MM-DD HH24:MI:SS'));
 INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (5, 1, 14, TO_TIMESTAMP('2024-08-01 10:00:00','YYYY-MM-DD HH24:MI:SS'));
 INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (8, 2, 7, TO_TIMESTAMP('2023-06-10 12:00:00','YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (11, 7, 1, TO_TIMESTAMP('2023-07-23 04:05:49','YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (17, 1, 14, TO_TIMESTAMP('2024-08-01 10:00:00','YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (2, 6, 8, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (6, 1, 13, TO_TIMESTAMP('2022-02-20 09:15:00','YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (15, 7, 17, TO_TIMESTAMP('2023-12-01 20:45:00','YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (8, 12, 17, TO_TIMESTAMP('2024-01-15 14:20:00','YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (9, 7, 19, TO_TIMESTAMP('2022-05-30 18:10:00','YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (2, 2, 10, TO_TIMESTAMP('2023-03-22 11:00:00','YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO Curtiu_Review (id_usuario_curtidor, id_usuario_autor, id_obra, instante_review) VALUES (5, 17, 2, TO_TIMESTAMP('2024-04-18 16:25:00','YYYY-MM-DD HH24:MI:SS'));
 
 
 INSERT INTO Participou (id_obra, id_artista) VALUES (1, 16);
