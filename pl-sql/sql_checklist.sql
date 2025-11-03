@@ -160,6 +160,40 @@ WHERE u.id IN (
         FROM Review
     );
 
+
+-- obras com duração maior que qualquer curta metragem (ANY)
+SELECT Obra.nome, Obra.duracao
+FROM Obra
+WHERE Obra.duracao > ANY (
+    SELECT Obra.duracao
+    FROM Obra
+    WHERE Obra.tipo = 'Curta-Metragem'
+);
+
+
+-- artistas que participaram de pelo menos uma obra no reino unido (ANY)
+SELECT Artistas.nome
+FROM Artistas
+WHERE Artistas.id IN (
+    SELECT Participou.id_artista
+    FROM Participou
+    WHERE Participou.id_obra = ANY (
+        SELECT Obra.id
+        FROM Obra
+        WHERE Obra.paisDeOrigem = 'Reino Unido'
+    )
+);
+
+-- os usuários com mais seguidores que todos os usuários de recife (ALL)
+
+SELECT u1.id, u1.nome
+FROM Usuario u1
+WHERE u1.seguidores > ALL (
+    SELECT u2.seguidores
+    FROM Usuario u2
+    WHERE u2.cidade = 'Recife'
+);
+
 -- Exibe instantes que ocorreram as ações mais recentes na aplicação, seja review ou adição em lista, em ordem decrescente
 SELECT rw.instante_avaliacao
 FROM Review rw
