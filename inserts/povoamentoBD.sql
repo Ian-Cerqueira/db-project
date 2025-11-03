@@ -251,6 +251,10 @@ INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, pos
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (14, 1, TO_TIMESTAMP('2024-08-01 10:00:00','YYYY-MM-DD HH24:MI:SS'), '5 estrelas pelos memes', 5, '0');
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (7, 2, TO_TIMESTAMP('2023-06-10 12:00:00','YYYY-MM-DD HH24:MI:SS'), 'peak', 4, '0');
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (8, 6, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Me fizeram uma proposta que não pude recusar', 3, '0');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (9, 10, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'i am become death destroyer of worlds', 5, '1');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (18, 3, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Os seres humanos tem polegares opositores', 4, '0');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (16, 19, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Nunca vi mas falam que é bom', 3, '0');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (13, 11, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'não curto cigarro', 1, '1');
 
 
 
