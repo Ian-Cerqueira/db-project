@@ -459,7 +459,6 @@ INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, pos
 INSERT INTO Lista_Personalizada (descricao, visibilidade, titulo) VALUES ('Minhas obras japonesas favoritas', '0', 'Obras Japonesas');
 INSERT INTO Lista_Personalizada (descricao, visibilidade, titulo) VALUES ('Absolut Cinema', '1', 'CINEMA');
 INSERT INTO Lista_Personalizada (descricao, visibilidade, titulo) VALUES ('Quem nao viu veja!', '1', 'Mistureba');
-
 INSERT INTO Lista_Personalizada (visibilidade, titulo) VALUES ('1', 'Oscars');
 INSERT INTO Lista_Personalizada (visibilidade, titulo) VALUES ('0', 'Animacao');
 
@@ -519,6 +518,7 @@ INSERT INTO Adicionou_Watchlist(id_lista, id_obra, id_usuario, data_adicao) VALU
 
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (3, 7);  -- atl segue jisbra
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (5, 7);  -- idhac segue jisbra
+INSERT INTO Segue (id_seguidor, id_seguido) VALUES (2, 7);  -- arlindo segue jisbra
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (2, 1);  -- arlindo segue afol
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (4, 2);  -- grtc segue arlindo
 INSERT INTO Segue (id_seguidor, id_seguido) VALUES (8, 4);  -- joaoteles segue grtc
