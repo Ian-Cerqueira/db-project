@@ -150,14 +150,19 @@ WHERE u.id IN (
 );
 
 -- Exibe Obras com notas maior que a média
-    SELECT o.nome
-    FROM Obra AS o
-    INNER JOIN Review AS rw
-    ON o.id = rw.id_obra
-    GROUP BY o.id, o.nome
-    HAVING(AVG(rw.nota)) > (
-        SELECT AVG(nota)
-        FROM Review
-    );
+SELECT o.nome
+FROM Obra AS o
+INNER JOIN Review AS rw
+ON o.id = rw.id_obra
+GROUP BY o.id, o.nome
+HAVING(AVG(rw.nota)) > (
+    SELECT AVG(nota)
+    FROM Review
+);
 
+
+-- Exibe os logins dos usuários os quais tem bio
+SELECT login
+FROM Usuario
+WHERE bio IS NOT NULL;
 
