@@ -253,7 +253,7 @@ INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, pos
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (8, 6, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Me fizeram uma proposta que não pude recusar', 3, '0');
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (9, 10, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'i am become death destroyer of worlds', 5, '1');
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (18, 3, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Os seres humanos tem polegares opositores', 4, '0');
-INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (16, 19, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Nunca vi mas falam que é bom', 3, '0');
+INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (16, 19, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Nunca vi mas falam que é bom', 2, '0');
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (13, 11, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'não curto cigarro', 1, '1');
 
 
@@ -296,6 +296,8 @@ INSERT INTO Adicionou_Lista_Personalizada (id_lista, id_obra, id_usuario, data_a
 INSERT INTO Adicionou_Lista_Personalizada (id_lista, id_obra, id_usuario, data_adicao) VALUES (3, 7, 12, SYSTIMESTAMP);
 INSERT INTO Adicionou_Lista_Personalizada (id_lista, id_obra, id_usuario, data_adicao) VALUES (3, 15, 12, SYSTIMESTAMP);
 INSERT INTO Adicionou_Lista_Personalizada (id_lista, id_obra, id_usuario, data_adicao) VALUES (3, 17, 12, SYSTIMESTAMP);
+INSERT INTO Adicionou_Lista_Personalizada (id_lista, id_obra, id_usuario, data_adicao) VALUES (3, 9, 12, SYSTIMESTAMP);
+INSERT INTO Adicionou_Lista_Personalizada (id_lista, id_obra, id_usuario, data_adicao) VALUES (3, 3, 12, SYSTIMESTAMP);
 
 -- Lista Privada 4
 INSERT INTO Adicionou_Lista_Personalizada (id_lista, id_obra, id_usuario, data_adicao) VALUES (4, 1, 19, SYSTIMESTAMP);
