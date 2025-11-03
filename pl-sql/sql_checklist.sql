@@ -193,3 +193,11 @@ WHERE u1.seguidores > ALL (
     FROM Usuario u2
     WHERE u2.cidade = 'Recife'
 );
+
+-- Exibe instantes que ocorreram as ações mais recentes na aplicação, seja review ou adição em lista, em ordem decrescente
+SELECT rw.instante_avaliacao
+FROM Review rw
+UNION
+SELECT Lp.data_adicao
+FROM Adicionou_Lista_personalizada Lp
+ORDER BY instante_avaliacao DESC;
