@@ -1,3 +1,10 @@
+-- reduzindo capacidade de sinopse pela metade
+ALTER TABLE Obra
+MODIFY sinopse VARCHAR2(750);
+
+-- permite que uma review não tenha nota, o que faz sentido dado o constraint em nota
+ALTER TABLE Review
+MODIFY Review.nota NUMBER NULL;
 
 -- updates no usuario --
 UPDATE Usuario
