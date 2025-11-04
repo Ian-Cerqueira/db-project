@@ -227,7 +227,7 @@ ORDER BY instante_avaliacao DESC;
 
 -- visão com todas as informações relevantes sobre uma obra
 CREATE OR REPLACE VIEW ObraInfo AS
-SELECT a.Titulo_obra, a.Tipo, a.Data_lancamento, a.Sinopse, a.Origem, a.Duracao, a.Nota_media, a.Curtidas, a.Vezes_Assistida, b.Estudios, b.Idiomas, b.Generos, b.Posters
+SELECT a.Titulo_obra, a.Tipo, a.Data_lancamento, a.Sinopse, a.Origem, a.Duracao, a.Nota_media, a.Curtidas, a.Vezes_Assistida, b.Estudios, b.Idiomas, b.Generos, b.Posters, b.Nome_artista
 FROM (
     (SELECT o.id, o.nome as Titulo_obra, o.tipo as Tipo, o.dataLancamento as Data_lancamento, o.sinopse as Sinopse, o.paisDeOrigem as Origem, o.duracao as Duracao,
     (SELECT AVG(rw.nota)
@@ -243,12 +243,13 @@ FROM (
 ) a
 LEFT JOIN
 (
-    SELECT o2.id, es.nome as Estudios, im.idioma as Idiomas, g.genero as Generos, ps.poster as Posters 
+    SELECT o2.id, es.nome as Estudios, im.idioma as Idiomas, g.genero as Generos, ps.poster as Posters, Art.Nome_artista as Nome_artista
     FROM Obra o2
     LEFT JOIN Estudio as es ON es.id_obra = o2.id
     LEFT JOIN Idiomas as im ON im.id_obra = o2.id
     LEFT JOIN Genero as g ON g.id_obra = o2.id
     LEFT JOIN Posters as ps ON ps.id_obra = o2.id
+    LEFT JOIN (SELECT ar.nome as Nome_artista, pc.id_obra as id_art FROM Participou as pc INNER JOIN Artistas ar ON pc.id_artista = ar.id) as Art ON Art.id_art = o2.id
 ) b
 ON a.id = b.id;
 
@@ -259,4 +260,30 @@ SELECT o.nome as Titulo_obra, u.login as Login_usuario, addwl.data_adicao
 FROM Watchlist as wl
 LEFT JOIN Adicionou_Watchlist as addwl ON addwl.id_lista = wl.id
 LEFT JOIN Usuario as u ON addwl.id_usuario = u.id
-LEFT JOIN Obras as o ON addwl.id_obra = o.id
+LEFT JOIN Obra as o ON addwl.id_obra = o.id
+;
+
+-- Visão com informações relevantes sobre artista
+CREATE OR REPLACE VIEW ArtistaInfo AS
+SELECT a.nome, a.bio, a.data_nascimento, b.nacionalidade, f.funcao, Obras_participou.Titulo_obra
+FROM Artistas a
+LEFT JOIN Funcoes f ON f.id_artista = a.id
+LEFT JOIN Nacionalidades n ON n.id_artista = a.id;
+LEFT JOIN (SELECT o.nome as Titulo_obra, p.id_artista as id_partObra FROM Participou p INNER JOIN Obra o ON p.id_obra = o.id) as Obras_participou ON Obras_participou.id_partObra = a.id
+;
+
+-- ================
+--  Grant & Revoke
+-- ================
+
+-- Permissões e proibições para o usuario comum da aplicação
+/*GRANT SELECT ON ObraInfo TO usuario_aplicacao;
+GRANT SELECT ON ArtistasInfo TO usuario_aplicacao;
+REVOKE ALL ON Obra TO usuario_aplicacao;
+REVOKE INSERT, UPDATE ON Usuario TO usuario_aplicacao;
+REVOKE UPDATE ON Entrada_do_Log TO usuario_aplicacao;
+
+-- Permissões do Administrador
+GRANT DBA TO admin_aplicacao;
+*/
+
