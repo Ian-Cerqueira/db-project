@@ -82,7 +82,7 @@ CREATE TABLE Usuario (
     login VARCHAR2(25) NOT NULL,
     senha VARCHAR2(50) NOT NULL,
     iconeDePerfil VARCHAR2(1000) NOT NULL,
-    bio VARCHAR2(300) NOT NULL, /* SEM BIO = STRING VAZIA */
+    bio VARCHAR2(300), /* SEM BIO = STRING VAZIA */
     pronome VARCHAR2(20),
     pais VARCHAR2(50),
     cidade VARCHAR2(100),

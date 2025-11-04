@@ -397,27 +397,26 @@ INSERT INTO Nacionalidades(id_artista, nacionalidade) VALUES (20, 'Estados Unido
 
 
 -- USUARIOS
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Arthur Fernandes', 'afol', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Arlindo', 'arlindo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Arthur Torres', 'atl', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Rio', 'grtc', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Ian', 'idhac', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Ítalo', 'icbo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Jesper Ian', 'jisbra', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('João Teles', 'joaoteles', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('maia', 'maf5', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Marcos Gabriel', 'marcosgabriel', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Thiago', 'tam6', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Victor', 'victor_ekko', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('UCI', 'uci', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('cherloque', 'cherloque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Arthur Fernandes', 'afol', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'Gosto de filmes de suspense', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Arlindo', 'arlindo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Arthur Torres', 'atl', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'NOOOOOOOOO', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Rio', 'grtc', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Ian', 'idhac', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'só vi uns 15 filmes na vida', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Ítalo', 'icbo', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Jesper Ian', 'jisbra', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('João Teles', 'joaoteles', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'Siga para mais', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('maia', 'maf5', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ela/Dela', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Marcos Gabriel', 'marcosgabriel', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Thiago', 'tam6', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Victor', 'victor_ekko', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('UCI', 'uci', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('cherloque', 'cherloque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
 INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('BockRolandinho', 'pipocando', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'São Paulo');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('PeeWee', 'peewee', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('PeeWee', 'peewee', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
 INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Isabela Boscov', 'isabela_boscov', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'EUA', 'Nova York');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('CineMania', 'cinemania', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('CineMania', 'cinemania', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
 INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('Omelete', 'omeleteve', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ela/Dela', 'Brasil', 'São Paulo');
-INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('cinemarque', 'cinemarque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', 'No bio', 'Ele/Dele', 'Brasil', 'Recife');
-
+INSERT INTO Usuario (nome, login, senha, iconeDePerfil, bio, pronome, pais, cidade) VALUES ('cinemarque', 'cinemarque', 'senha123', 'https://i.imgur.com/HQJKYW1.png', '', 'Ele/Dele', 'Brasil', 'Recife');
 
 
 INSERT INTO Estudio (nome, id_obra) VALUES ('Metro-Goldwyn-Mayer', 1);
