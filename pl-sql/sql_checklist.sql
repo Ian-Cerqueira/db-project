@@ -220,3 +220,43 @@ UNION
 SELECT Lp.data_adicao
 FROM Adicionou_Lista_personalizada Lp
 ORDER BY instante_avaliacao DESC;
+
+-- ==========
+--   Visões 
+-- ==========
+
+-- visão com todas as informações relevantes sobre uma obra
+CREATE OR REPLACE VIEW ObraInfo AS
+SELECT a.Titulo_obra, a.Tipo, a.Data_lancamento, a.Sinopse, a.Origem, a.Duracao, a.Nota_media, a.Curtidas, a.Vezes_Assistida, b.Estudios, b.Idiomas, b.Generos, b.Posters
+FROM (
+    (SELECT o.id, o.nome as Titulo_obra, o.tipo as Tipo, o.dataLancamento as Data_lancamento, o.sinopse as Sinopse, o.paisDeOrigem as Origem, o.duracao as Duracao,
+    (SELECT AVG(rw.nota)
+    FROM Review rw
+    WHERE rw.id_obra = o.id) as Nota_media,
+    (SELECT COUNT(co.id_usuario)
+    FROM Curtiu_Obra co
+    WHERE co.id_obra = o.id) as Curtidas,
+    (SELECT COUNT(Elog.instante_log)
+    FROM Entrada_do_Log Elog
+    WHERE Elog.id_obra = o.id) as Vezes_Assistida
+    FROM Obra as o)
+) a
+LEFT JOIN
+(
+    SELECT o2.id, es.nome as Estudios, im.idioma as Idiomas, g.genero as Generos, ps.poster as Posters 
+    FROM Obra o2
+    LEFT JOIN Estudio as es ON es.id_obra = o2.id
+    LEFT JOIN Idiomas as im ON im.id_obra = o2.id
+    LEFT JOIN Genero as g ON g.id_obra = o2.id
+    LEFT JOIN Posters as ps ON ps.id_obra = o2.id
+) b
+ON a.id = b.id;
+
+
+-- visão com Watchlist, seu proprietário e Obras que pertencem
+CREATE OR REPLACE VIEW Watchlist_view AS
+SELECT o.nome as Titulo_obra, u.login as Login_usuario, addwl.data_adicao
+FROM Watchlist as wl
+LEFT JOIN Adicionou_Watchlist as addwl ON addwl.id_lista = wl.id
+LEFT JOIN Usuario as u ON addwl.id_usuario = u.id
+LEFT JOIN Obras as o ON addwl.id_obra = o.id
