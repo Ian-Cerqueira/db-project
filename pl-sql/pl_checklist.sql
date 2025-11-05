@@ -36,8 +36,8 @@ BEGIN
 END;
 /
 
--- Comandos ultilizados:
--- Objetivos
+-- Comandos ultilizados: TYPE TABLE, RECORD, FOR IN LOOP, IF ELSIF
+-- Objetivo: Mostrar a quantidade de Reviews que tem cada filme
 DECLARE 
     TYPE v_obra_review IS RECORD(
         nome Obra.nome%TYPE,
