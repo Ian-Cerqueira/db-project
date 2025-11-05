@@ -36,6 +36,50 @@ BEGIN
 END;
 /
 
+-- Comandos ultilizados:
+-- Objetivos
+DECLARE 
+    TYPE v_obra_review IS RECORD(
+        nome Obra.nome%TYPE,
+        total_reviews NUMBER
+    ); 
+
+    TYPE t_quantidade_reviews IS TABLE OF v_obra_review;
+    v_quantidade_reviews t_quantidade_reviews;
+
+BEGIN
+    SELECT o.nome, COUNT(r.id_obra) AS total_reviews
+    BULK COLLECT INTO v_quantidade_reviews
+    FROM Obra o
+    LEFT JOIN Review r ON o.id = r.id_obra
+    GROUP BY o.nome
+    ORDER BY total_reviews DESC;
+
+    IF v_quantidade_reviews.COUNT = 0 THEN
+        DBMS_OUTPUT.PUT_LINE('NENHUMA REVIEW ENCONTRADA.');
+        RETURN;
+    ELSE
+        FOR i IN 1 .. v_quantidade_reviews.COUNT LOOP
+            IF i = v_quantidade_reviews.FIRST AND v_quantidade_reviews(i).total_reviews > 0 THEN
+                DBMS_OUTPUT.PUT_LINE(
+                'OBRA COM MAIS REVIEWS: ' || v_quantidade_reviews(i).nome || 
+                ' - TOTAL DE REVIEWS: ' || v_quantidade_reviews(i).total_reviews);
+            
+            ELSIF v_quantidade_reviews(i).total_reviews = 0 THEN
+                DBMS_OUTPUT.PUT_LINE('SEM REVIEWS: ' || v_quantidade_reviews(i).nome);
+            
+            ELSE 
+                DBMS_OUTPUT.PUT_LINE(
+                'OBRA: ' || v_quantidade_reviews(i).nome || 
+                ' - TOTAL DE REVIEWS: ' || v_quantidade_reviews(i).total_reviews);
+            
+            END IF;
+        END LOOP;
+            DBMS_OUTPUT.PUT_LINE('------------------------------------');
+    END IF;
+END;
+/
+
 -- Função para calcular a nota média de uma obra lendo todas as suas reviews
 -- comandos usados CREATE OR REPLACE FUNCTION, PARAMETRO IN, CURSOR
 CREATE OR REPLACE FUNCTION calcular_nota_media (
