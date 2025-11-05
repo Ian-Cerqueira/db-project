@@ -212,7 +212,7 @@ CREATE OR REPLACE PACKAGE BODY pkg_filmes IS
   PROCEDURE listar_filmes_por_ano(p_ano_inicio IN NUMBER, p_ano_fim IN NUMBER) IS
     CURSOR c_filmes IS
       SELECT nome, dataLancamento FROM Obra
-      WHERE dataLancamento BETWEEN p_ano_inicio AND p_ano_fim;
+      WHERE EXTRACT(YEAR FROM dataLancamento) BETWEEN p_ano_inicio AND p_ano_fim;
   BEGIN
     FOR filme IN c_filmes LOOP
       DBMS_OUTPUT.PUT_LINE('Filme: ' || filme.nome || ' - Ano: ' || filme.dataLancamento);

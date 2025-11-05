@@ -206,12 +206,16 @@ WHERE Artistas.id IN (
 
 -- os usuários com mais seguidores que todos os usuários de recife (ALL)
 
-SELECT u1.id, u1.nome
+SELECT u1.nome, u1.login
 FROM Usuario u1
-WHERE u1.seguidores > ALL (
-    SELECT u2.seguidores
-    FROM Usuario u2
+-- A condição WHERE agora usa uma subconsulta para CONTAR os seguidores de u1
+WHERE (SELECT COUNT(*) FROM Segue s WHERE s.id_seguido = u1.id) > ALL (
+    -- A subconsulta do ALL também foi alterada para CONTAR os seguidores dos usuários de Recife
+    SELECT COUNT(s2.id_seguidor)
+    FROM Segue s2
+    JOIN Usuario u2 ON s2.id_seguido = u2.id
     WHERE u2.cidade = 'Recife'
+    GROUP BY s2.id_seguido
 );
 
 -- Exibe instantes que ocorreram as ações mais recentes na aplicação, seja review ou adição em lista, em ordem decrescente
