@@ -64,12 +64,12 @@ SELECT o.nome, o.paisDeOrigem
 FROM Obra o
 WHERE o.dataLancamento BETWEEN TO_DATE('2000-01-01', 'YYYY-MM-DD') AND TO_DATE('2025-01-01', 'YYYY-MM-DD') AND o.paisDeOrigem = 'Japão';
 
-SELECT Obra.nome, Obra.duracao
-FROM Obra
+SELECT o.nome, o.duracao
+FROM Obra o
 WHERE duracao BETWEEN 80 and 100;
 
 -- Exibe o nome das obras que possuem mais artistas do que a Obra 1 --
-SELECT O.nome, COUNT(O.id_artista) as qtd_artistas
+SELECT O.nome
 From Obra O
 WHERE O.id IN (
     SELECT p.id_obra
