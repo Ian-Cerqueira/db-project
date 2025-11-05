@@ -59,9 +59,10 @@ JOIN Segue ON Usuario.id = Segue.id_seguidor
 JOIN Usuario UsuarioSeguido ON Segue.id_seguido = UsuarioSeguido.id
 WHERE UsuarioSeguido.login = 'jisbra';
 
-SELECT Obra.nome, Obra.paisDeOrigem
-FROM Obra
-WHERE Obra.anoDeLancamento BETWEEN 2000 AND 2025 AND Obra.paisDeOrigem = 'Japão';
+-- Obtêm todos os filmes japoneses que foram lançados entre 2000 e 2025
+SELECT o.nome, o.paisDeOrigem
+FROM Obra o
+WHERE o.dataLancamento BETWEEN TO_DATE('2000-01-01', 'YYYY-MM-DD') AND TO_DATE('2025-01-01', 'YYYY-MM-DD') AND o.paisDeOrigem = 'Japão';
 
 SELECT Obra.nome, Obra.duracao
 FROM Obra
