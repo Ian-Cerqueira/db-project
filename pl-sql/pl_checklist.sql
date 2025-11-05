@@ -241,3 +241,37 @@ CREATE OR REPLACE PACKAGE BODY pkg_filmes IS
 
 END pkg_filmes;
 /
+
+-- Triggers de comando
+CREATE OR REPLACE TRIGGER insert_Curtiu_review_trg
+    AFTER INSERT ON Curtiu_Review
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Sucesso! A review foi curtida.');
+    DBMS_OUTPUT.PUT_LINE('Instante: ' || TO_CHAR(SYSDATE, 'DD/MM/YYYY HH24:MI:SS'));
+
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Erro na execução da ação.');
+END;
+/
+
+CREATE OR REPLACE TRIGGER update_lista_personalizada_trg
+    AFTER UPDATE OF visibilidade ON Lista_Personalizada
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Visibilidade da lista foi alterada.');
+    DBMS_OUTPUT.PUT_LINE('Instante: ' || TO_CHAR(SYSDATE, 'DD/MM/YYYY HH24:MI:SS'));
+
+EXCEPTION
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Erro na execução da ação.');
+END;
+/
+
+CREATE OR REPLACE TRIGGER delete_entrada_log_trg
+    BEFORE DELETE ON Entrada_do_Log
+BEGIN
+    RAISE_APPLICATION_ERROR(-99, 'Não é permitido apagar o histórico de logs.');
+
+END;
+/
+
