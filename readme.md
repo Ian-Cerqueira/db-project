@@ -40,3 +40,14 @@ O projeto implementa um banco de dados para gerenciamento de operações e infor
 
 > 4° - Execute “povoamentoBD.sql”
 >
+
+> 5° - Execute “sql_checklist.sql”
+>
+
+> 6° - Execute “pl_checklist.sql”
+>
+
+
+## Observações
+
+Embora, no checklist da disciplina, os comandos de trigger pertençam à parte dos requisitos de PL, para fins de execução, eles estão no arquivo “trigger.sql”.
