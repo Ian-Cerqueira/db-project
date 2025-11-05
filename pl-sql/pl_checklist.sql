@@ -270,7 +270,7 @@ END;
 CREATE OR REPLACE TRIGGER delete_entrada_log_trg
     BEFORE DELETE ON Entrada_do_Log
 BEGIN
-    RAISE_APPLICATION_ERROR(-99, 'Não é permitido apagar o histórico de logs.');
+    RAISE_APPLICATION_ERROR(-20001, 'Não é permitido apagar o histórico de logs.');
 
 END;
 /
