@@ -266,7 +266,7 @@ LEFT JOIN Obra o ON addwl.id_obra = o.id
 
 -- Visão com informações relevantes sobre artista
 CREATE OR REPLACE VIEW ArtistaInfo AS
-SELECT a.nome, a.bio, a.data_nascimento, b.nacionalidade, f.funcao, Obras_participou.Titulo_obra
+SELECT a.nome, a.bio, a.data_nascimento, a.nacionalidade, f.funcao, Obras_participou.Titulo_obra
 FROM Artistas a
 LEFT JOIN Funcoes f ON f.id_artista = a.id
 LEFT JOIN Nacionalidades n ON n.id_artista = a.id
