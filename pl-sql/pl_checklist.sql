@@ -73,5 +73,38 @@ BEGIN
 
     RETURN average;
 
+-- Uso de Tables e loop While para iterar manualmente e printar as regiões do mundo associadas a idiomas de obras
+DECLARE
+    TYPE idi_table IS TABLE OF Idiomas%ROWTYPE;
+    regiao VARCHAR2(100);
+    idiomas_table idi_table;
+    counter NUMBER := 1;
+    total_idiomas NUMBER;
+
+BEGIN
+    SELECT * BULK COLLECT INTO idiomas_table FROM Idiomas;
+    total_idiomas := idiomas_table.COUNT;
+    DBMS_OUTPUT.PUT_LINE('Quais regiões e países poderão assistir');
+    DBMS_OUTPUT.PUT_LINE('=======================================================================');
+    WHILE counter <= idiomas_table.COUNT LOOP
+        regiao := NULL;
+        CASE
+            WHEN idiomas_table(counter).idioma = 'Inglês' THEN
+                regiao := 'Todos os continentes vão assistir '
+            WHEN idiomas_table(counter).idioma = 'Russo' THEN
+                regiao := 'Mais algúem fala russo algúem da Rússia? Bom, vão gostar de '
+            WHEN idiomas_table(counter).idioma = 'Japonês' THEN
+                regiao := 'A terra do sol nascente poderá assistir '
+            WHEN idiomas_table(counter).idioma = 'Português' THEN
+                regiao := 'Lusófonos, podemos assistir '
+            ELSE
+                regiao := 'O idioma ('||idiomas_table(counter).idioma||') está disponível para '
+        END CASE;
+
+        DBMS_OUTPUT.PUT_LINE(regiao || idiomas_table(counter).id_obra);
+        counter := counter + 1;
+    END LOOP;
+END;
+
 END;
 /
