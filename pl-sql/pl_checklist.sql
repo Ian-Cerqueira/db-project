@@ -11,7 +11,8 @@ BEGIN
     INTO ObraMaisReview
     FROM Obra o
     WHERE o.id = 2;
-
+END;
+/
 
 -- Comandos utilizados: TYPE TABLE, ROWTYPE, FOR IN LOOP
 -- Objetivo: Criar uma coleção pra armazenar usuários e listar os usuários com a nacionalidade brasileira.
@@ -33,6 +34,7 @@ BEGIN
         );
     END LOOP;
 END;
+/
 
 -- Função para calcular a nota média de uma obra lendo todas as suas reviews
 -- comandos usados CREATE OR REPLACE FUNCTION, PARAMETRO IN, CURSOR
@@ -72,7 +74,9 @@ BEGIN
     average := ROUND(total/counter, 2);
 
     RETURN average;
-
+END;
+/
+    
 -- Uso de Tables e loop While para iterar manualmente e printar as regiões do mundo associadas a idiomas de obras
 DECLARE
     TYPE idi_table IS TABLE OF Idiomas%ROWTYPE;
@@ -104,8 +108,6 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE(regiao || idiomas_table(counter).id_obra);
         counter := counter + 1;
     END LOOP;
-END;
-
 END;
 /
 
