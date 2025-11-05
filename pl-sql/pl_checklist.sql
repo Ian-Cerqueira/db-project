@@ -98,7 +98,7 @@ BEGIN
             WHEN idiomas_table(counter).idioma = 'Português' THEN
                 regiao := 'Lusófonos, podemos assistir '
             ELSE
-                regiao := 'O idioma ('|| idiomas_table(counter).idioma ||') está disponível para '
+                regiao := 'O idioma (' || idiomas_table(counter).idioma || ') está disponível para '
         END CASE;
 
         DBMS_OUTPUT.PUT_LINE(regiao || idiomas_table(counter).id_obra);
