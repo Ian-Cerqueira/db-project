@@ -33,3 +33,45 @@ BEGIN
         );
     END LOOP;
 END;
+
+-- Função para calcular a nota média de uma obra lendo todas as suas reviews
+-- comandos usados CREATE OR REPLACE FUNCTION, PARAMETRO IN, CURSOR
+CREATE OR REPLACE FUNCTION calcular_nota_media (
+    id_obra_in IN NUMBER
+) RETURN NUMBER
+
+IS 
+total NUMBER := 0;
+counter NUMBER := 0;
+average NUMBER := 0;
+v_nota Review.nota%TYPE;
+
+CURSOR c_review IS 
+        SELECT nota
+        FROM Review
+        WHERE id_obra = id_obra_in;
+
+
+BEGIN
+    OPEN c_review;
+
+    LOOP 
+        FETCH c_review INTO v_nota
+        EXIT WHEN c_review%NOTFOUND;
+
+        total := total + v_nota;
+        counter := counter + 1;
+    END LOOP;
+
+    CLOSE c_review;
+
+    IF counter = 0 THEN
+        RETURN 0;
+    END IF;
+    
+    average := ROUND(total/counter, 2);
+
+    RETURN average;
+
+END;
+/
