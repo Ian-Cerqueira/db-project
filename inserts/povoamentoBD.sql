@@ -266,7 +266,6 @@ INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (2, 10, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 22, 'Diretor');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 13, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 15, 'Ator');
-INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 2, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 12, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 2, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 10, 'Ator');
