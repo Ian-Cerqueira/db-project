@@ -126,7 +126,7 @@ BEGIN
 EXCEPTION
     WHEN OTHERS THEN RETURN -1;
 
-END calcular_quantidade_de_curtidas
+END calcular_quantidade_de_curtidas;
 /
 
 DECLARE
