@@ -102,7 +102,7 @@ BEGIN
     OPEN c_review;
 
     LOOP 
-        FETCH c_review INTO v_nota
+        FETCH c_review INTO v_nota;
         EXIT WHEN c_review%NOTFOUND;
 
         total := total + v_nota;
@@ -138,15 +138,15 @@ BEGIN
         regiao := NULL;
         CASE
             WHEN idiomas_table(counter).idioma = 'Inglês' THEN
-                regiao := 'Todos os continentes vão assistir '
+                regiao := 'Todos os continentes vão assistir ';
             WHEN idiomas_table(counter).idioma = 'Russo' THEN
-                regiao := 'Mais algúem fala russo algúem da Rússia? Bom, vão gostar de '
+                regiao := 'Mais algúem fala russo algúem da Rússia? Bom, vão gostar de ';
             WHEN idiomas_table(counter).idioma = 'Japonês' THEN
-                regiao := 'A terra do sol nascente poderá assistir '
+                regiao := 'A terra do sol nascente poderá assistir ';
             WHEN idiomas_table(counter).idioma = 'Português' THEN
-                regiao := 'Lusófonos, podemos assistir '
+                regiao := 'Lusófonos, podemos assistir ';
             ELSE
-                regiao := 'O idioma (' || idiomas_table(counter).idioma || ') está disponível para '
+                regiao := 'O idioma (' || idiomas_table(counter).idioma || ') está disponível para ';
         END CASE;
 
         DBMS_OUTPUT.PUT_LINE(regiao || idiomas_table(counter).id_obra);
@@ -165,7 +165,7 @@ BEGIN
     SELECT NVL(COUNT(DISTINCT id_usuario), 0) as Usuarios_distintos
     INTO quantidade_total
     FROM Curtiu_Obra co
-    WHERE co.id_obra = id_template
+    WHERE co.id_obra = id_template;
 
     RETURN quantidade_total;
 
@@ -194,4 +194,50 @@ BEGIN
     END LOOP;
 
 END;
+/
+
+CREATE OR REPLACE PACKAGE pkg_filmes IS
+
+  PROCEDURE listar_filmes_por_ano(p_ano_inicio IN NUMBER, p_ano_fim IN NUMBER);
+
+  FUNCTION media_nota_obra(p_id_obra IN NUMBER) RETURN NUMBER;
+
+  FUNCTION total_artistas_obra(p_id_obra IN NUMBER) RETURN NUMBER;
+
+END pkg_filmes;
+/
+
+CREATE OR REPLACE PACKAGE BODY pkg_filmes IS
+
+  PROCEDURE listar_filmes_por_ano(p_ano_inicio IN NUMBER, p_ano_fim IN NUMBER) IS
+    CURSOR c_filmes IS
+      SELECT nome, dataLancamento FROM Obra
+      WHERE dataLancamento BETWEEN p_ano_inicio AND p_ano_fim;
+  BEGIN
+    FOR filme IN c_filmes LOOP
+      DBMS_OUTPUT.PUT_LINE('Filme: ' || filme.nome || ' - Ano: ' || filme.dataLancamento);
+    END LOOP;
+  END listar_filmes_por_ano;
+
+  FUNCTION media_nota_obra(p_id_obra IN NUMBER) RETURN NUMBER IS
+    v_media NUMBER;
+  BEGIN
+    SELECT AVG(nota) INTO v_media
+    FROM Review
+    WHERE id_obra = p_id_obra;
+
+    RETURN NVL(v_media, 0);
+  END media_nota_obra;
+
+  FUNCTION total_artistas_obra(p_id_obra IN NUMBER) RETURN NUMBER IS
+    v_total NUMBER;
+  BEGIN
+    SELECT COUNT(DISTINCT id_artista) INTO v_total
+    FROM Participou
+    WHERE id_obra = p_id_obra;
+
+    RETURN NVL(v_total, 0);
+  END total_artistas_obra;
+
+END pkg_filmes;
 /
