@@ -4,7 +4,7 @@ MODIFY sinopse VARCHAR2(750);
 
 -- permite que uma review não tenha nota, o que faz sentido dado o constraint em nota
 ALTER TABLE Review
-MODIFY Review.nota NUMBER NULL;
+MODIFY nota NUMBER NULL;
 
 -- updates no usuario --
 UPDATE Usuario
@@ -39,17 +39,10 @@ WHERE id_usuario = 3 AND id_obra = 1;
 DELETE FROM Curtiu_Obra
 WHERE id_usuario = 9 AND id_obra = 3;
 
--- deleta filmes maiores do que 2 horas das listas personalizadas do usuário 12 --
-DELETE FROM Lista_Personalizada
-WHERE id_usuario = 12 
-AND id_obra IN (
-    SELECT id FROM Obra
-    WHERE duracao > 120
-);
-
 -- deleta logs os quais tenham seus registros com mais do que 10 anos --
 DELETE FROM Entrada_do_Log l
 WHERE l.instante_log < ADD_MONTHS(SYSTIMESTAMP, -120);
+/* É esperado que o output seja um erro, visto que não é permitido deletar logs*/
 
 /*ALTER TABLE Entrada_do_log
 RENAME COLUMN Entrada_do_log TO Log_Entrada;*/
@@ -63,27 +56,28 @@ ON Usuario(nome);
 SELECT Usuario.nome, Usuario.login
 FROM Usuario
 JOIN Segue ON Usuario.id = Segue.id_seguidor
-JOIN Usuario AS UsuarioSeguido ON Segue.id_seguido = UsuarioSeguido.id
+JOIN Usuario UsuarioSeguido ON Segue.id_seguido = UsuarioSeguido.id
 WHERE UsuarioSeguido.login = 'jisbra';
 
-SELECT Obra.nome, Obra.paisDeOrigem
-FROM Obra
-WHERE Obra.anoDeLancamento BETWEEN 2000 AND 2025 AND Obra.paisDeOrigem = 'Japão';
+-- Obtêm todos os filmes japoneses que foram lançados entre 2000 e 2025
+SELECT o.nome, o.paisDeOrigem
+FROM Obra o
+WHERE o.dataLancamento BETWEEN TO_DATE('2000-01-01', 'YYYY-MM-DD') AND TO_DATE('2025-01-01', 'YYYY-MM-DD') AND o.paisDeOrigem = 'Japão';
 
-SELECT Obra.nome, Obra.duracao
-FROM Obra
-WHERE duracao BETWEEN 80 and 100
+SELECT o.nome, o.duracao
+FROM Obra o
+WHERE duracao BETWEEN 80 and 100;
 
 -- Exibe o nome das obras que possuem mais artistas do que a Obra 1 --
-SELECT O.nome, COUNT(O.id_artista) as qtd_artistas
-From Obra as O
+SELECT O.nome
+From Obra O
 WHERE O.id IN (
     SELECT p.id_obra
-    FROM Participou as p
+    FROM Participou p
     GROUP BY p.id_obra
     HAVING COUNT(id_artista) > (
         SELECT COUNT(id_artista)
-        FROM Participou as r
+        FROM Participou r
         WHERE r.id_obra = 1
     )
 );
@@ -91,11 +85,11 @@ WHERE O.id IN (
 -- Exibe o nome das obras que não foram produzidas no EUA --
 SELECT nome
 FROM Obra
-WHERE paisDeOrigem NOT LIKE 'Estados Unidos%';
+WHERE paisDeOrigem NOT LIKE '%EUA%';
 
 -- Exibe o login do usuario mais seguido
 SELECT u.login
-FROM Usuario as u
+FROM Usuario u
 WHERE u.id IN (
     SELECT id_seguido
     FROM Segue
@@ -108,12 +102,12 @@ WHERE u.id IN (
             GROUP BY id_seguido
         )
     )
-)
+);
 
 -- Exibe os nomes dos artistas e a quantidade de funcoes dos artistas que fizeram mais funcoes diferentes
 SELECT a.nome, COUNT(DISTINCT f.funcao) as Qtd_funcoes_diferentes
-FROM Funcoes as f
-RIGHT JOIN Artistas as a
+FROM Funcoes f
+RIGHT JOIN Artistas a
 ON f.id_artista = a.id
 GROUP BY a.nome
 ORDER BY COUNT(DISTINCT f.funcao) DESC;
@@ -137,7 +131,7 @@ WHERE id IN (
 
 -- Exibe o login do usuario que mais passou tempo assistindo
 SELECT u.login
-FROM Usuario as u
+FROM Usuario u
 WHERE u.id IN (
     SELECT id_usuario
     FROM Obra
@@ -148,8 +142,8 @@ WHERE u.id IN (
         SELECT MAX(tempo_total_assistido)
         FROM (
             SELECT SUM(duracao) as tempo_total_assistido
-            FROM Obra as o
-            INNER JOIN Entrada_do_Log as e
+            FROM Obra o
+            INNER JOIN Entrada_do_Log e
             ON o.id = e.id_obra
             GROUP BY e.id_usuario
         )
@@ -158,8 +152,8 @@ WHERE u.id IN (
 
 -- Exibe Obras com notas maior que a média
 SELECT o.nome
-FROM Obra AS o
-INNER JOIN Review AS rw
+FROM Obra o
+INNER JOIN Review rw
 ON o.id = rw.id_obra
 GROUP BY o.id, o.nome
 HAVING(AVG(rw.nota)) > (
@@ -175,7 +169,7 @@ WHERE bio IS NOT NULL;
 
 -- Exibe titulo da lista que não tem obras de aventura
 SELECT lp.titulo as Nome_da_lista
-FROM Lista_Personalizada as lp
+FROM Lista_Personalizada lp
 GROUP BY lp.id, lp.titulo
 HAVING lp.id != ALL (
     SELECT alp.id_lista
@@ -212,12 +206,16 @@ WHERE Artistas.id IN (
 
 -- os usuários com mais seguidores que todos os usuários de recife (ALL)
 
-SELECT u1.id, u1.nome
+SELECT u1.nome, u1.login
 FROM Usuario u1
-WHERE u1.seguidores > ALL (
-    SELECT u2.seguidores
-    FROM Usuario u2
+-- A condição WHERE agora usa uma subconsulta para CONTAR os seguidores de u1
+WHERE (SELECT COUNT(*) FROM Segue s WHERE s.id_seguido = u1.id) > ALL (
+    -- A subconsulta do ALL também foi alterada para CONTAR os seguidores dos usuários de Recife
+    SELECT COUNT(s2.id_seguidor)
+    FROM Segue s2
+    JOIN Usuario u2 ON s2.id_seguido = u2.id
     WHERE u2.cidade = 'Recife'
+    GROUP BY s2.id_seguido
 );
 
 -- Exibe instantes que ocorreram as ações mais recentes na aplicação, seja review ou adição em lista, em ordem decrescente
@@ -246,17 +244,17 @@ FROM (
     (SELECT COUNT(Elog.instante_log)
     FROM Entrada_do_Log Elog
     WHERE Elog.id_obra = o.id) as Vezes_Assistida
-    FROM Obra as o)
+    FROM Obra o)
 ) a
 LEFT JOIN
 (
     SELECT o2.id, es.nome as Estudios, im.idioma as Idiomas, g.genero as Generos, ps.poster as Posters, Art.Nome_artista as Nome_artista
     FROM Obra o2
-    LEFT JOIN Estudio as es ON es.id_obra = o2.id
-    LEFT JOIN Idiomas as im ON im.id_obra = o2.id
-    LEFT JOIN Genero as g ON g.id_obra = o2.id
-    LEFT JOIN Posters as ps ON ps.id_obra = o2.id
-    LEFT JOIN (SELECT ar.nome as Nome_artista, pc.id_obra as id_art FROM Participou as pc INNER JOIN Artistas ar ON pc.id_artista = ar.id) as Art ON Art.id_art = o2.id
+    LEFT JOIN Estudio es ON es.id_obra = o2.id
+    LEFT JOIN Idiomas im ON im.id_obra = o2.id
+    LEFT JOIN Genero g ON g.id_obra = o2.id
+    LEFT JOIN Posters ps ON ps.id_obra = o2.id
+    LEFT JOIN (SELECT ar.nome as Nome_artista, pc.id_obra as id_art FROM Participou pc INNER JOIN Artistas ar ON pc.id_artista = ar.id) Art ON Art.id_art = o2.id
 ) b
 ON a.id = b.id;
 
@@ -264,19 +262,19 @@ ON a.id = b.id;
 -- visão com Watchlist, seu proprietário e Obras que pertencem
 CREATE OR REPLACE VIEW Watchlist_view AS
 SELECT o.nome as Titulo_obra, u.login as Login_usuario, addwl.data_adicao
-FROM Watchlist as wl
-LEFT JOIN Adicionou_Watchlist as addwl ON addwl.id_lista = wl.id
-LEFT JOIN Usuario as u ON addwl.id_usuario = u.id
-LEFT JOIN Obra as o ON addwl.id_obra = o.id
+FROM Watchlist wl
+LEFT JOIN Adicionou_Watchlist addwl ON addwl.id_lista = wl.id
+LEFT JOIN Usuario u ON addwl.id_usuario = u.id
+LEFT JOIN Obra o ON addwl.id_obra = o.id
 ;
 
 -- Visão com informações relevantes sobre artista
 CREATE OR REPLACE VIEW ArtistaInfo AS
-SELECT a.nome, a.bio, a.data_nascimento, b.nacionalidade, f.funcao, Obras_participou.Titulo_obra
+SELECT a.nome, a.bio, a.data_nascimento, a.nacionalidade, f.funcao, Obras_participou.Titulo_obra
 FROM Artistas a
 LEFT JOIN Funcoes f ON f.id_artista = a.id
-LEFT JOIN Nacionalidades n ON n.id_artista = a.id;
-LEFT JOIN (SELECT o.nome as Titulo_obra, p.id_artista as id_partObra FROM Participou p INNER JOIN Obra o ON p.id_obra = o.id) as Obras_participou ON Obras_participou.id_partObra = a.id
+LEFT JOIN Nacionalidades n ON n.id_artista = a.id
+LEFT JOIN (SELECT o.nome as Titulo_obra, p.id_artista as id_partObra FROM Participou p INNER JOIN Obra o ON p.id_obra = o.id) Obras_participou ON Obras_participou.id_partObra = a.id
 ;
 
 -- ================

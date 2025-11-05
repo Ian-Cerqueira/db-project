@@ -266,7 +266,6 @@ INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (2, 10, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 22, 'Diretor');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 13, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 15, 'Ator');
-INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 2, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 12, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 2, 'Ator');
 INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 10, 'Ator');
@@ -458,13 +457,6 @@ INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, pos
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (18, 3, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Os seres humanos tem polegares opositores', 4, '0');
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (16, 19, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'Nunca vi mas falam que é bom', 2, '0');
 INSERT INTO Review (id_obra, id_usuario, instante_avaliacao, conteudo, nota, possui_spoiler) VALUES (13, 11, TO_TIMESTAMP('2021-11-05 15:30:00','YYYY-MM-DD HH24:MI:SS'), 'não curto cigarro', 1, '1');
-
-
-INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (1, 16, 'Diretor');
-INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (12, 1, 'Diretor');
-INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 13, 'Ator');
-INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (3, 15, 'Ator');
-INSERT INTO Funcoes(id_obra, id_artista, funcao) VALUES (7, 18, 'Ator');
 
 -- Listas Personalizadas
 INSERT INTO Lista_Personalizada (descricao, visibilidade, titulo) VALUES ('Minhas obras japonesas favoritas', '0', 'Obras Japonesas');
