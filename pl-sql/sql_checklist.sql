@@ -42,6 +42,7 @@ WHERE id_usuario = 9 AND id_obra = 3;
 -- deleta logs os quais tenham seus registros com mais do que 10 anos --
 DELETE FROM Entrada_do_Log l
 WHERE l.instante_log < ADD_MONTHS(SYSTIMESTAMP, -120);
+/* É esperado que o output seja um erro, visto que não é permitido deletar logs*/
 
 /*ALTER TABLE Entrada_do_log
 RENAME COLUMN Entrada_do_log TO Log_Entrada;*/
