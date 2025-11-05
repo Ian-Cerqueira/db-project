@@ -85,7 +85,7 @@ WHERE O.id IN (
 -- Exibe o nome das obras que não foram produzidas no EUA --
 SELECT nome
 FROM Obra
-WHERE paisDeOrigem NOT LIKE 'Estados Unidos%';
+WHERE paisDeOrigem NOT LIKE '%EUA%';
 
 -- Exibe o login do usuario mais seguido
 SELECT u.login
